@@ -277,8 +277,6 @@ endmodule
 
 
 //--------₊✩‧₊˚౨ৎ˚₊✩‧₊----core-----₊✩‧₊˚౨ৎ˚₊✩‧₊--------//
-// cavalo xbox? 
-
 
 
 module Gekkonidae (
