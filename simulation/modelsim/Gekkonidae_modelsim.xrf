@@ -1,0 +1,7 @@
+vendor_name = ModelSim
+source_file = 1, C:/github/IC-Single-core/Gekkonidae.sv
+source_file = 1, C:/github/IC-Single-core/db/Gekkonidae.cbx.xml
+design_name = Gekkonidae
+instance = comp, \clk~input , clk~input, Gekkonidae, 1
+instance = comp, \reset~input , reset~input, Gekkonidae, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, Gekkonidae, 1
