@@ -1,0 +1,49 @@
+module tb_gekkonidae;
+
+  // Testbench signals
+	logic        enable_write_instruction,
+	logic [31:0] write_data_debug,
+	logic [7:0]  write_address_debug,
+
+	logic        clk,
+	logic        reset
+
+
+  // Instantiate the DUT (Device Under Test)
+  Gekkonidae uut (
+    .enable_write_instruction(enable_write_instruction),
+    .write_data_debug(write_data_debug),
+    .write_address_debug(write_address_debug),
+	 .clk(clk),
+	 .reset(reset)
+  );
+
+  // Test stimulus
+  initial begin
+    $display("Starting testbench...");
+
+    // Test case 1: Load instruction (opcode = 7'b0000011)
+    opcode = 7'b0000011;
+    #10;
+    $display("Opcode: %b | Control Word: %b | ALU Op: %b", opcode, control_word, alu_op);
+
+    // Test case 2: Store instruction (opcode = 7'b0100011)
+    opcode = 7'b0100011;
+    #10;
+    $display("Opcode: %b | Control Word: %b | ALU Op: %b", opcode, control_word, alu_op);
+
+    // Test case 3: R-type instruction (opcode = 7'b0110011)
+    opcode = 7'b0110011;
+    #10;
+    $display("Opcode: %b | Control Word: %b | ALU Op: %b", opcode, control_word, alu_op);
+
+    // Test case 4: Unknown instruction (default case)
+    opcode = 7'b1111111;
+    #10;
+    $display("Opcode: %b | Control Word: %b | ALU Op: %b", opcode, control_word, alu_op);
+
+    $display("Testbench completed.");
+    $stop;
+  end
+
+endmodule

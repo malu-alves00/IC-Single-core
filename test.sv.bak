@@ -1,0 +1,15 @@
+module test (
+	input  logic [1:0] code,
+	output logic [1:0] word
+);
+
+always_comb begin
+
+	case(code)
+		2'b0x: begin
+			word = 2'b11;
+		end
+		
+		
+end
+endmodule

@@ -1,0 +1,9 @@
+module tb_test_concat;
+
+	logic [3:0] code;
+	logic       a,b,c,d;
+
+
+
+
+endmodule 

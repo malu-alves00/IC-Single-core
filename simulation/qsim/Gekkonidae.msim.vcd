@@ -1,0 +1,59 @@
+$comment
+	File created using the following command:
+		vcd file Gekkonidae.msim.vcd -direction
+$end
+$date
+	Wed Jan 08 15:51:47 2025
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module test_vlg_vec_tst $end
+$var reg 2 ! code [1:0] $end
+$var wire 1 " word [1] $end
+$var wire 1 # word [0] $end
+$scope module i1 $end
+$var wire 1 $ gnd $end
+$var wire 1 % vcc $end
+$var wire 1 & unknown $end
+$var tri1 1 ' devclrn $end
+$var tri1 1 ( devpor $end
+$var tri1 1 ) devoe $end
+$var wire 1 * code[0]~input_o $end
+$var wire 1 + code[1]~input_o $end
+$var wire 1 , ~QUARTUS_CREATED_GND~I_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1 !
+0#
+0"
+0$
+1%
+x&
+1'
+1(
+1)
+1*
+0+
+0,
+$end
+#260000
+b0 !
+0*
+#560000
+b10 !
+b11 !
+1*
+1+
+#880000
+b1 !
+b0 !
+0*
+0+
+#1000000

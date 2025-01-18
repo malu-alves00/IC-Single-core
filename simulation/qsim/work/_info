@@ -1,0 +1,119 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\github\IC-Single-core\simulation\qsim
+vmain_decoder
+Z1 !s100 [GPS<1ESdX@BaHV<HP5`D2
+Z2 IV7;lo?I[nQSkUEVgzQi5=1
+Z3 V^dFhI3boSf8QDBXBm?HHM1
+Z4 dC:\github\IC-Single-core\simulation\qsim
+Z5 w1736362306
+Z6 8Gekkonidae.vo
+Z7 FGekkonidae.vo
+L0 32
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Gekkonidae.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1736362307.031000
+Z12 !s107 Gekkonidae.vo|
+!s101 -O0
+vmain_decoder_vlg_vec_tst
+!i10b 1
+Z13 !s100 oI2f@YnKR7PBbQ]hN7Hok1
+Z14 InMbE2kndB<mRPk[86>@;I2
+Z15 V<AIf>L6[cIFV6R]]DnEDf1
+R4
+w1736362305
+Z16 8Waveform.vwf.vt
+Z17 FWaveform.vwf.vt
+L0 30
+R8
+r1
+!s85 0
+31
+!s108 1736362307.066000
+!s107 Waveform.vwf.vt|
+Z18 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+vmain_fsm
+Z19 I3DT[zN><gAG5`779KFg>;2
+Z20 VHTWFHQW][=i??>WgljdAd0
+R4
+Z21 w1736360614
+R6
+R7
+L0 32
+R8
+r1
+31
+R9
+R10
+Z22 !s100 BUIAjkX9Ccbj=Ul1faRcU3
+Z23 !s108 1736360614.568000
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vmain_fsm_vlg_vec_tst
+Z24 IjYlSK_mGQM>I8`Pg7b_h?0
+Z25 V<dAL]V>:A3cN@mWA4?W_U1
+R4
+Z26 w1736360613
+R16
+R17
+L0 30
+R8
+r1
+31
+R18
+R10
+Z27 !s100 2BU9=B;3M34_Dk2R^]:LW3
+Z28 !s108 1736360614.604000
+Z29 !s107 Waveform.vwf.vt|
+!i10b 1
+!s85 0
+!s101 -O0
+vtest
+Z30 IA;nh^K1iN:hBd[g]ZRzM43
+Z31 V_gPHD=CbZCfE<Io8D[:Z20
+R4
+Z32 w1736359483
+R6
+R7
+L0 32
+R8
+r1
+31
+R9
+R10
+Z33 !s100 Yi?najeeK[nNPeV26PTM[0
+Z34 !s108 1736359483.767000
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vtest_vlg_vec_tst
+Z35 !s100 gWXW3Pheaad;1eFj4;S_i3
+Z36 IjH3lfl`h`2@aG:Ch@S`Ki1
+Z37 Va5b;6:2=HDheAU5FQATGI3
+R4
+Z38 w1736359482
+R16
+R17
+L0 30
+R8
+r1
+31
+R18
+R10
+Z39 !s108 1736359483.801000
+R29
+!i10b 1
+!s85 0
+!s101 -O0

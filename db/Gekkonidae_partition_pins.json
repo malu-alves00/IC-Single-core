@@ -2,7 +2,252 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "control_word_debug[0]",
+					"strict" : false
+				},
+				{
+					"name" : "control_word_debug[1]",
+					"strict" : false
+				},
+				{
+					"name" : "control_word_debug[2]",
+					"strict" : false
+				},
+				{
+					"name" : "control_word_debug[3]",
+					"strict" : false
+				},
+				{
+					"name" : "control_word_debug[4]",
+					"strict" : false
+				},
+				{
+					"name" : "control_word_debug[5]",
+					"strict" : false
+				},
+				{
+					"name" : "control_word_debug[6]",
+					"strict" : false
+				},
+				{
+					"name" : "control_word_debug[7]",
+					"strict" : false
+				},
+				{
+					"name" : "control_word_debug[8]",
+					"strict" : false
+				},
+				{
+					"name" : "control_word_debug[9]",
+					"strict" : false
+				},
+				{
+					"name" : "control_word_debug[10]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_value[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_value[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_value[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_value[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_value[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_value[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_value[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_value[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_value[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_value[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_value[10]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_value[11]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_value[12]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_value[13]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_value[14]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_value[15]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[3]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[4]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[5]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[6]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[7]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[8]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[9]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[10]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[11]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[12]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[13]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[14]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[15]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[16]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[17]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[18]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[19]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[20]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[21]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[22]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[23]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[24]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[25]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[26]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[27]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[28]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[29]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[30]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg_2_debug[31]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
 		}
 	]
 }
