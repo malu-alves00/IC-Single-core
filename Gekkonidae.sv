@@ -1,11 +1,25 @@
 
 // --- Pipeline
 
-// A implementar:
+// A fazer:
 
-// RAW (read after write)
-// load hazard
-// branch control hazard
+// Testes. Testbench está retornando muitos valores indefinidos. Possíveis erros nas ligações entre módulos?
+/*
+Suposições:
+
+* todos os módulos estão funcionando perfeitamente bem sozinhos, mas não foram testados isoladamente:
+	1 - datapath
+	2 - unidade de controle com a pipeline (sem pipeline estava funcionando)
+	3 - unidade de execução
+
+- datapath está em descompasso com a unidade de controle?
+- datapath possui os módulos com ligações erradas?
+- checar novamente a ordem de execução de non-blocking assignments
+
+
+
+*/
+
 
 //-------------somador--------------/
 
@@ -118,6 +132,7 @@ endmodule
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// para lidar com hazards
 
 module hazard_unit(
 	input  logic [4:0] Rs1D, Rs2D, Rs1E, Rs2E, RdE, RdM, RdW,
@@ -165,6 +180,8 @@ endmodule
 
 //----------------control unit----------------//
 
+// junta os módulos de decoding
+
 module controller(
 	input  logic [6:0] op,
 	input  logic [2:0] funct3,
@@ -184,13 +201,15 @@ module controller(
 	logic [2:0] ALUControlD;
 	logic			ALUSrcD;
 	
-	assign ResulSrcE0 = ResultSrcE[0];
+	assign ResulSrcE0 = ResultSrcE[0]; // vai para hazard_unit
 	
-	maindec md(op, ResultSrcD, MemWriteD, BranchD, ALUSrcD, RegWriteD, JumpD, ImmSrcD, ALUOp);
+	maindec md(op, ResultSrcD, MemWriteD, BranchD, ALUSrcD, RegWriteD, JumpD, ImmSrcD, ALUOp); // decoder principal
 	
-	aludec ad(op[5], funct3, funct7b5, ALUOp, ALUControlD);
+	aludec ad(op[5], funct3, funct7b5, ALUOp, ALUControlD); // decoder da ula, que depende do aluop do decoder principal
 	
 	always_ff @(posedge clk) begin
+		
+		// decode -> execute -> memory
 		
 		if(FlushE) begin
 		
@@ -227,6 +246,7 @@ module controller(
 	assign PCSrcE = (BranchE & Zero) | JumpE;
 endmodule
 
+// decoder principal
 
 module maindec(
 	input  logic [6:0] op,
@@ -251,7 +271,8 @@ module maindec(
 		endcase
 endmodule
 
-// aludec ad(op[5], funct3, funct7b5, ALUOp, ALUControl);
+
+// decoder da ula, depende de aluop do decoder principal
 
 module aludec(
 	input logic        op_bit,
@@ -277,6 +298,7 @@ module aludec(
 endmodule
 
 
+// unidade para buscar instrução e computar o próximo valor do program counter
 
 module fetch_unit(
 	input  logic        clk, reset, PcSrc, StallF,
@@ -294,6 +316,9 @@ module fetch_unit(
 	adder pcadd4(pc, 32'd4, PCPlus4); // somador para pc (sem branch)
 
 endmodule 
+
+// unidade para busucar valores no register file e fazer a extensão do imediato enquanto o controlador faz o decode da instrução
+
 
 module rf_unit(
 	input  logic        RegWrite,
@@ -315,6 +340,8 @@ module rf_unit(
 
 endmodule 
 
+// unidade para gerenciar o datapath da execução. computa o branch do program counter.
+
 module execute_unit(
 	input  logic        ALUSrc,
 	input  logic [1:0]  ForwardA, ForwardB,
@@ -332,14 +359,20 @@ module execute_unit(
 	
 	adder pcaddbranch(pc, ImmExt, PCTarget); // valor do branch para pc
 	
-	mux3 #(32) scrAhazard(Rd1, ResultW, ALUResultM, ForwardA, SrcA);
+	// escolhem o valor de entrada da ula caso utilize algum valor que está nos próximos 2 estágios
+	// (memory ou writeback) sem precisar fazer o stall da pipeline.
 	
-	mux3 #(32) lerolerohazard(Rd2, ResultW, ALUResultM, ForwardB, WriteData);
+	mux3 #(32) scrAhazard(Rd1, ResultW, ALUResultM, ForwardA, SrcA); 
+	
+	mux3 #(32) lerolerohazard(Rd2, ResultW, ALUResultM, ForwardB, WriteData); // não consigo mudar o nome porque dá erro no quartus?
+	
+	//
 	
 	mux2 #(32) srcbmux(WriteData, ImmExt, ALUSrc, SrcB); // origem de b na ula
 
 endmodule
 
+// com certeza, aqui está o erro
 
 module datapath(
 	input  logic        clk, reset,
