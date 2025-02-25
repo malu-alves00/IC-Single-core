@@ -1,0 +1,448 @@
+m255
+K4
+z2
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/github/IC-Single-core/simulation/questa
+vio_buf_opdrn
+Z1 2c:/intelfpga/23.1std/quartus/eda/sim_lib/sgate.v
+Z2 !s110 1740058707
+!i10b 1
+!s100 kI<0MRJaacKMn5<<@K2@g0
+IJeTS8_fz0QdgaC7M7lSKh3
+R0
+Z3 w1715758842
+Z4 8c:/intelfpga/23.1std/quartus/eda/sim_lib/sgate.v
+Z5 Fc:/intelfpga/23.1std/quartus/eda/sim_lib/sgate.v
+!i122 16
+L0 249 22
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z8 !s108 1740058707.000000
+!s107 c:/intelfpga/23.1std/quartus/eda/sim_lib/sgate.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|sgate_ver|c:/intelfpga/23.1std/quartus/eda/sim_lib/sgate.v|
+!i113 0
+Z10 o-vlog01compat -work sgate_ver -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 tCvgOpt 0
+vio_buf_tri
+R1
+R2
+!i10b 1
+!s100 amXEKaU]ih:VA0da2Y9F^1
+IYJ=Q4<[k8bcK8;:f=XGG=1
+R0
+R3
+R4
+R5
+!i122 16
+L0 221 23
+R6
+R7
+r1
+!s85 0
+31
+R8
+Z12 !s107 c:/intelfpga/23.1std/quartus/eda/sim_lib/sgate.v|
+R9
+!i113 0
+R10
+R11
+vmux21
+R1
+R2
+!i10b 1
+!s100 k8Nk_kBA4PDbO<j0bKZhz3
+I10Vjz<TU9T5=T^In>ngk51
+R0
+R3
+R4
+R5
+!i122 16
+L0 191 26
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_add
+R1
+R2
+!i10b 1
+!s100 CUGWRXZ2moe__LNj?V5>30
+I`6CKRVb_C]7Ca7fo8f8kB1
+R0
+R3
+R4
+R5
+!i122 16
+L0 19 74
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_addsub
+R1
+R2
+!i10b 1
+!s100 G=4AQ8KNCd0;hG=1aFAFh0
+I6iaJ`AllZJ;=mCf1]`zPO2
+R0
+R3
+R4
+R5
+!i122 16
+L0 96 91
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_bus_mux
+R1
+R2
+!i10b 1
+!s100 Jn7BNGko@Ek5NY3m1@WCC2
+IcmzPec5SHL@D?nb<m4AiE2
+R0
+R3
+R4
+R5
+!i122 16
+L0 1073 59
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_decoder
+R1
+R2
+!i10b 1
+!s100 f`9FAgNG5>f[:k23O^NbL2
+IH;H2Ni>M17WT4R]Nk8DUO2
+R0
+R3
+R4
+R5
+!i122 16
+L0 1037 32
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_div
+R1
+R2
+!i10b 1
+!s100 1E:DQdXX6lajz109Y^Eb`0
+IzDGX6FjGEVWkW2GfFaHP33
+R0
+R3
+R4
+R5
+!i122 16
+L0 395 85
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_latch
+R1
+R2
+!i10b 1
+!s100 3`nTUZIlf[@4MeT`G<:iC1
+Ial8^W_LRK>H9<FHH_5PTk3
+R0
+R3
+R4
+R5
+!i122 16
+L0 1136 17
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_left_shift
+R1
+R2
+!i10b 1
+!s100 N>n@bJOW@7Fj:VD97zNez2
+I1SoMzhT2PZ`d5b3?M^VNl1
+R0
+R3
+R4
+R5
+!i122 16
+L0 573 72
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_less_than
+R1
+R2
+!i10b 1
+!s100 G1K3czY>Y4V:WgI53mj3n1
+IFI]5AOlYzfN<G<bS^zWaQ3
+R0
+R3
+R4
+R5
+!i122 16
+L0 854 88
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_mod
+R1
+R2
+!i10b 1
+!s100 [g]k:gikbfz_@<@KzCj3Y0
+IG2dn29l>YbOk[3NY`fY6_1
+R0
+R3
+R4
+R5
+!i122 16
+L0 484 85
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_mult
+R1
+R2
+!i10b 1
+!s100 hVk@O<RUSonRCUhccLBFJ0
+I8HWA4o0QHN[EPIdehU6dU2
+R0
+R3
+R4
+R5
+!i122 16
+L0 275 68
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_mux
+R1
+R2
+!i10b 1
+!s100 QaPJU2@67<J<T_hg=>AV70
+IHBVh@1G67lS:hFcd1OTZ:1
+R0
+R3
+R4
+R5
+!i122 16
+L0 946 42
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_right_shift
+R1
+R2
+!i10b 1
+!s100 1_Q?l[Qk?NXAVEM:FPh[30
+IFC=2@AU9Y`7nZjZLiXd3[2
+R0
+R3
+R4
+R5
+!i122 16
+L0 650 79
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_rotate_left
+R1
+R2
+!i10b 1
+!s100 J:mk_gjQdQ9G^QPF@U[9g3
+IQNMzW><XZZDTBXe89[0GU1
+R0
+R3
+R4
+R5
+!i122 16
+L0 733 57
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_rotate_right
+R1
+R2
+!i10b 1
+!s100 IiC`l=@oZA^KAeFBQncOG3
+I:M_66=nCkNaF<e<Po:A<43
+R0
+R3
+R4
+R5
+!i122 16
+L0 794 56
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_selector
+R1
+R2
+!i10b 1
+!s100 8X=8ed5Sgn6XF;l6Xn:Qd1
+IBl<]lEeKa9hc`MSW`0I>O2
+R0
+R3
+R4
+R5
+!i122 16
+L0 992 41
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+vtri_bus
+R1
+R2
+!i10b 1
+!s100 cZejCOTID=A`kK1gHLgaf3
+I5_7zNZ@>;Rc>?knX0Cf<51
+R0
+R3
+R4
+R5
+!i122 16
+L0 348 43
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11

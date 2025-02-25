@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Gekkonidae
-Fri Jan 17 18:00:27 2025
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Thu Feb 20 10:24:40 2025
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
 ---------------------
@@ -13,30 +13,21 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis RAM Summary
-  9. Analysis & Synthesis IP Cores Summary
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for instr_mem_rom:instr_mem_rom|altsyncram:altsyncram_component|altsyncram_6hg1:auto_generated
- 14. Source assignments for data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated
- 15. Parameter Settings for User Entity Instance: program_counter:program_counter
- 16. Parameter Settings for User Entity Instance: instr_mem_rom:instr_mem_rom|altsyncram:altsyncram_component
- 17. Parameter Settings for User Entity Instance: register_file:register_file
- 18. Parameter Settings for User Entity Instance: data_instr:data_instr|altsyncram:altsyncram_component
- 19. altsyncram Parameter Settings by Entity Instance
- 20. Port Connectivity Checks: "alu:alu"
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
- 24. Analysis & Synthesis Suppressed Messages
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: mux2:pcmux
+ 10. Parameter Settings for User Entity Instance: flopenr:pcreg
+ 11. Port Connectivity Checks: "adder:pcadd4"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2024  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -53,27 +44,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Jan 17 18:00:27 2025       ;
-; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                   ; Gekkonidae                                  ;
-; Top-level Entity Name           ; Gekkonidae                                  ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1008                                        ;
-; Total pins                      ; 205                                         ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 8,192                                       ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Feb 20 10:24:40 2025          ;
+; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Revision Name                   ; Gekkonidae                                     ;
+; Top-level Entity Name           ; fetch_unit                                     ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 32                                             ;
+; Total pins                      ; 100                                            ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -82,7 +73,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; Gekkonidae         ; Gekkonidae         ;
+; Top-level entity name                                                           ; fetch_unit         ; Gekkonidae         ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Maximum processors allowed for parallel compilation                             ; 16                 ;                    ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
@@ -177,39 +168,18 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processors 9-16        ;   0.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                              ;
-+----------------------------------+-----------------+---------------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                             ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+---------------------------------------+------------------------------------------------------------------------------+---------+
-; Gekkonidae.sv                    ; yes             ; User SystemVerilog HDL File           ; C:/github/IC-Single-core/Gekkonidae.sv                                       ;         ;
-; isntr_mem.hex                    ; yes             ; User Hexadecimal (Intel-Format) File  ; C:/github/IC-Single-core/isntr_mem.hex                                       ;         ;
-; instr_mem_rom.v                  ; yes             ; User Wizard-Generated File            ; C:/github/IC-Single-core/instr_mem_rom.v                                     ;         ;
-; data_instr.hex                   ; yes             ; User Hexadecimal (Intel-Format) File  ; C:/github/IC-Single-core/data_instr.hex                                      ;         ;
-; data_instr.v                     ; yes             ; User Wizard-Generated File            ; C:/github/IC-Single-core/data_instr.v                                        ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_6hg1.tdf           ; yes             ; Auto-Generated Megafunction           ; C:/github/IC-Single-core/db/altsyncram_6hg1.tdf                              ;         ;
-; db/altsyncram_hso1.tdf           ; yes             ; Auto-Generated Megafunction           ; C:/github/IC-Single-core/db/altsyncram_hso1.tdf                              ;         ;
-+----------------------------------+-----------------+---------------------------------------+------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                               ;
++----------------------------------+-----------------+------------------------------+----------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path           ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------+---------+
+; Gekkonidae.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/github/IC-Single-core/Gekkonidae.sv ;         ;
+; riscvtest.txt                    ; yes             ; User File                    ; C:/github/IC-Single-core/riscvtest.txt ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -217,115 +187,38 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 1156      ;
+; Estimate of Logic utilization (ALMs needed) ; 31        ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 1029      ;
-;     -- 7 input functions                    ; 455       ;
-;     -- 6 input functions                    ; 214       ;
-;     -- 5 input functions                    ; 158       ;
-;     -- 4 input functions                    ; 33        ;
-;     -- <=3 input functions                  ; 169       ;
+; Combinational ALUT usage for logic          ; 31        ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 0         ;
+;     -- 5 input functions                    ; 0         ;
+;     -- 4 input functions                    ; 0         ;
+;     -- <=3 input functions                  ; 31        ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 1008      ;
+; Dedicated logic registers                   ; 32        ;
 ;                                             ;           ;
-; I/O pins                                    ; 205       ;
-; Total MLAB memory bits                      ; 0         ;
-; Total block memory bits                     ; 8192      ;
+; I/O pins                                    ; 100       ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 1072      ;
-; Total fan-out                               ; 9780      ;
-; Average fan-out                             ; 3.89      ;
+; Maximum fan-out                             ; 32        ;
+; Total fan-out                               ; 413       ;
+; Average fan-out                             ; 1.57      ;
 +---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                          ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                    ; Entity Name     ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |Gekkonidae                               ; 1029 (0)            ; 1008 (0)                  ; 8192              ; 0          ; 205  ; 0            ; |Gekkonidae                                                                                            ; Gekkonidae      ; work         ;
-;    |alu:alu|                              ; 122 (122)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Gekkonidae|alu:alu                                                                                    ; alu             ; work         ;
-;    |data_instr:data_instr|                ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Gekkonidae|data_instr:data_instr                                                                      ; data_instr      ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Gekkonidae|data_instr:data_instr|altsyncram:altsyncram_component                                      ; altsyncram      ; work         ;
-;          |altsyncram_hso1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Gekkonidae|data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated       ; altsyncram_hso1 ; work         ;
-;    |extend_unit:extend_unit|              ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Gekkonidae|extend_unit:extend_unit                                                                    ; extend_unit     ; work         ;
-;    |full_decoder:full_decoder|            ; 42 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Gekkonidae|full_decoder:full_decoder                                                                  ; full_decoder    ; work         ;
-;       |alu_decoder:alu_decoder|           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Gekkonidae|full_decoder:full_decoder|alu_decoder:alu_decoder                                          ; alu_decoder     ; work         ;
-;       |main_decoder:main_decoder|         ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Gekkonidae|full_decoder:full_decoder|main_decoder:main_decoder                                        ; main_decoder    ; work         ;
-;    |instr_mem_rom:instr_mem_rom|          ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Gekkonidae|instr_mem_rom:instr_mem_rom                                                                ; instr_mem_rom   ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Gekkonidae|instr_mem_rom:instr_mem_rom|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
-;          |altsyncram_6hg1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Gekkonidae|instr_mem_rom:instr_mem_rom|altsyncram:altsyncram_component|altsyncram_6hg1:auto_generated ; altsyncram_6hg1 ; work         ;
-;    |mux_2to1:sel_reg_wr|                  ; 72 (72)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Gekkonidae|mux_2to1:sel_reg_wr                                                                        ; mux_2to1        ; work         ;
-;    |mux_2to1:sel_src_b|                   ; 28 (28)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Gekkonidae|mux_2to1:sel_src_b                                                                         ; mux_2to1        ; work         ;
-;    |pc_sum:pc_sum_four|                   ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Gekkonidae|pc_sum:pc_sum_four                                                                         ; pc_sum          ; work         ;
-;    |program_counter:program_counter|      ; 17 (17)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |Gekkonidae|program_counter:program_counter                                                            ; program_counter ; work         ;
-;    |register_file:register_file|          ; 704 (704)           ; 992 (992)                 ; 0                 ; 0          ; 0    ; 0            ; |Gekkonidae|register_file:register_file                                                                ; register_file   ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------+-----------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                          ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name       ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------+-------------+--------------+
+; |fetch_unit                ; 31 (0)              ; 32 (0)                    ; 0                 ; 0          ; 100  ; 0            ; |fetch_unit               ; fetch_unit  ; work         ;
+;    |adder:pcadd4|          ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fetch_unit|adder:pcadd4  ; adder       ; work         ;
+;    |flopenr:pcreg|         ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |fetch_unit|flopenr:pcreg ; flopenr     ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                               ;
-+-------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
-; Name                                                                                                  ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF            ;
-+-------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
-; data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|ALTSYNCRAM       ; AUTO ; Single Port ; 128          ; 32           ; --           ; --           ; 4096 ; data_instr.hex ;
-; instr_mem_rom:instr_mem_rom|altsyncram:altsyncram_component|altsyncram_6hg1:auto_generated|ALTSYNCRAM ; AUTO ; ROM         ; 128          ; 32           ; --           ; --           ; 4096 ; isntr_mem.hex  ;
-+-------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                     ;
-+--------+--------------+---------+--------------+--------------+-----------------------------------------+-----------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                         ; IP Include File ;
-+--------+--------------+---------+--------------+--------------+-----------------------------------------+-----------------+
-; Altera ; RAM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |Gekkonidae|data_instr:data_instr       ; data_instr.v    ;
-; Altera ; ROM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |Gekkonidae|instr_mem_rom:instr_mem_rom ; instr_mem_rom.v ;
-+--------+--------------+---------+--------------+--------------+-----------------------------------------+-----------------+
-
-
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; register_file:register_file|regs~0     ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~1     ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~2     ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~3     ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~4     ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~5     ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~6     ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~7     ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~8     ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~9     ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~10    ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~11    ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~12    ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~13    ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~14    ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~15    ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~16    ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~17    ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~18    ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~19    ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~20    ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~21    ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~22    ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~23    ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~24    ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~25    ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~26    ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~27    ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~28    ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~29    ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~30    ; Stuck at GND due to stuck port clock_enable ;
-; register_file:register_file|regs~31    ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 32 ;                                             ;
-+----------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -333,228 +226,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1008  ;
-; Number of registers using Synchronous Clear  ; 14    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Total registers                              ; 32    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 30    ;
+; Number of registers using Asynchronous Clear ; 32    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 994   ;
+; Number of registers using Clock Enable       ; 32    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Gekkonidae|program_counter:program_counter|PC_state[1] ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |Gekkonidae|program_counter:program_counter|PC_state[8] ;
-; 8:1                ; 6 bits    ; 30 LEs        ; 18 LEs               ; 12 LEs                 ; No         ; |Gekkonidae|alu:alu|Mux30                               ;
-; 9:1                ; 25 bits   ; 150 LEs       ; 100 LEs              ; 50 LEs                 ; No         ; |Gekkonidae|mux_2to1:sel_reg_wr|out[30]                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Source assignments for instr_mem_rom:instr_mem_rom|altsyncram:altsyncram_component|altsyncram_6hg1:auto_generated ;
-+---------------------------------+--------------------+------+-----------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                  ;
-+---------------------------------+--------------------+------+-----------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                   ;
-+---------------------------------+--------------------+------+-----------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------+
-; Source assignments for data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated ;
-+---------------------------------+--------------------+------+-----------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                            ;
-+---------------------------------+--------------------+------+-----------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                             ;
-+---------------------------------+--------------------+------+-----------------------------------------------+
-
-
-+------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: program_counter:program_counter ;
-+----------------+-------+-----------------------------------------------------+
-; Parameter Name ; Value ; Type                                                ;
-+----------------+-------+-----------------------------------------------------+
-; INSTR_WIDTH    ; 32    ; Signed Integer                                      ;
-+----------------+-------+-----------------------------------------------------+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2:pcmux ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; WIDTH          ; 32    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: instr_mem_rom:instr_mem_rom|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+----------------------------------------------+
-; Parameter Name                     ; Value                ; Type                                         ;
-+------------------------------------+----------------------+----------------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                      ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                   ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                 ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                 ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                               ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                                      ;
-; OPERATION_MODE                     ; ROM                  ; Untyped                                      ;
-; WIDTH_A                            ; 32                   ; Signed Integer                               ;
-; WIDTHAD_A                          ; 7                    ; Signed Integer                               ;
-; NUMWORDS_A                         ; 128                  ; Signed Integer                               ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                      ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                      ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                      ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                      ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                                      ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                      ;
-; WIDTH_B                            ; 1                    ; Untyped                                      ;
-; WIDTHAD_B                          ; 1                    ; Untyped                                      ;
-; NUMWORDS_B                         ; 1                    ; Untyped                                      ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                                      ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                      ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                      ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                      ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                      ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                      ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                                      ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                      ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                      ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                      ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                      ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                      ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                               ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                      ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                      ;
-; BYTE_SIZE                          ; 8                    ; Untyped                                      ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                      ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                      ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                      ;
-; INIT_FILE                          ; isntr_mem.hex        ; Untyped                                      ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                      ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                      ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                      ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                      ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                      ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                      ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                      ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                      ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                                      ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                      ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                      ;
-; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                      ;
-; CBXI_PARAMETER                     ; altsyncram_6hg1      ; Untyped                                      ;
-+------------------------------------+----------------------+----------------------------------------------+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: flopenr:pcreg ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 32    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register_file:register_file ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; DATA_WIDTH     ; 32    ; Signed Integer                                  ;
-; NUM_REGS       ; 32    ; Signed Integer                                  ;
-; INDEX_WIDTH    ; 5     ; Signed Integer                                  ;
-+----------------+-------+-------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: data_instr:data_instr|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+----------------------------------------+
-; Parameter Name                     ; Value                ; Type                                   ;
-+------------------------------------+----------------------+----------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                             ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                           ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                           ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                         ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                                ;
-; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                ;
-; WIDTH_A                            ; 32                   ; Signed Integer                         ;
-; WIDTHAD_A                          ; 7                    ; Signed Integer                         ;
-; NUMWORDS_A                         ; 128                  ; Signed Integer                         ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                                ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                ;
-; WIDTH_B                            ; 1                    ; Untyped                                ;
-; WIDTHAD_B                          ; 1                    ; Untyped                                ;
-; NUMWORDS_B                         ; 1                    ; Untyped                                ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                                ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                                ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                         ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                ;
-; BYTE_SIZE                          ; 8                    ; Untyped                                ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                ;
-; INIT_FILE                          ; data_instr.hex       ; Untyped                                ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                                ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                ;
-; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                ;
-; CBXI_PARAMETER                     ; altsyncram_hso1      ; Untyped                                ;
-+------------------------------------+----------------------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                                        ;
-+-------------------------------------------+-------------------------------------------------------------+
-; Name                                      ; Value                                                       ;
-+-------------------------------------------+-------------------------------------------------------------+
-; Number of entity instances                ; 2                                                           ;
-; Entity Instance                           ; instr_mem_rom:instr_mem_rom|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; ROM                                                         ;
-;     -- WIDTH_A                            ; 32                                                          ;
-;     -- NUMWORDS_A                         ; 128                                                         ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                ;
-;     -- WIDTH_B                            ; 1                                                           ;
-;     -- NUMWORDS_B                         ; 1                                                           ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                      ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                        ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                   ;
-; Entity Instance                           ; data_instr:data_instr|altsyncram:altsyncram_component       ;
-;     -- OPERATION_MODE                     ; SINGLE_PORT                                                 ;
-;     -- WIDTH_A                            ; 32                                                          ;
-;     -- NUMWORDS_A                         ; 128                                                         ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                ;
-;     -- WIDTH_B                            ; 1                                                           ;
-;     -- NUMWORDS_B                         ; 1                                                           ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                      ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                        ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                   ;
-+-------------------------------------------+-------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu:alu"                                                                                                     ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                                  ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; overflow ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------+
++--------------------------------------------+
+; Port Connectivity Checks: "adder:pcadd4"   ;
++----------+-------+----------+--------------+
+; Port     ; Type  ; Severity ; Details      ;
++----------+-------+----------+--------------+
+; b[31..3] ; Input ; Info     ; Stuck at GND ;
+; b[1..0]  ; Input ; Info     ; Stuck at GND ;
+; b[2]     ; Input ; Info     ; Stuck at VCC ;
++----------+-------+----------+--------------+
 
 
 +-----------------------------------------------------+
@@ -562,32 +272,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 1008                        ;
-;     ENA               ; 994                         ;
-;     SCLR              ; 14                          ;
-; arriav_io_obuf        ; 41                          ;
-; arriav_lcell_comb     ; 1031                        ;
-;     arith             ; 95                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 14                          ;
-;         2 data inputs ; 6                           ;
-;         4 data inputs ; 1                           ;
-;         5 data inputs ; 73                          ;
-;     extend            ; 455                         ;
-;         7 data inputs ; 455                         ;
-;     normal            ; 481                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 77                          ;
-;         3 data inputs ; 71                          ;
-;         4 data inputs ; 32                          ;
-;         5 data inputs ; 85                          ;
-;         6 data inputs ; 214                         ;
-; boundary_port         ; 205                         ;
-; stratixv_ram_block    ; 64                          ;
+; arriav_ff             ; 32                          ;
+;     ENA CLR           ; 2                           ;
+;     ENA CLR SLD       ; 30                          ;
+; arriav_lcell_comb     ; 31                          ;
+;     arith             ; 30                          ;
+;         1 data inputs ; 30                          ;
+;     normal            ; 1                           ;
+;         2 data inputs ; 1                           ;
+; boundary_port         ; 100                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 11.50                       ;
-; Average LUT depth     ; 8.65                        ;
+; Max LUT depth         ; 3.90                        ;
+; Average LUT depth     ; 2.06                        ;
 +-----------------------+-----------------------------+
 
 
@@ -596,7 +292,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -605,403 +301,56 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Jan 17 18:00:19 2025
+    Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+    Info: Processing started: Thu Feb 20 10:24:34 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Gekkonidae -c Gekkonidae
 Info (20032): Parallel compilation is enabled and will use up to 16 processors
-Info (12021): Found 12 design units, including 12 entities, in source file gekkonidae.sv
-    Info (12023): Found entity 1: mux_2to1 File: C:/github/IC-Single-core/Gekkonidae.sv Line: 4
-    Info (12023): Found entity 2: alu File: C:/github/IC-Single-core/Gekkonidae.sv Line: 27
-    Info (12023): Found entity 3: register_file File: C:/github/IC-Single-core/Gekkonidae.sv Line: 73
-    Info (12023): Found entity 4: program_counter File: C:/github/IC-Single-core/Gekkonidae.sv Line: 107
-    Info (12023): Found entity 5: pc_sum File: C:/github/IC-Single-core/Gekkonidae.sv Line: 151
-    Info (12023): Found entity 6: instruction_memory File: C:/github/IC-Single-core/Gekkonidae.sv Line: 171
-    Info (12023): Found entity 7: data_memory File: C:/github/IC-Single-core/Gekkonidae.sv Line: 208
-    Info (12023): Found entity 8: extend_unit File: C:/github/IC-Single-core/Gekkonidae.sv Line: 251
-    Info (12023): Found entity 9: main_decoder File: C:/github/IC-Single-core/Gekkonidae.sv Line: 283
-    Info (12023): Found entity 10: alu_decoder File: C:/github/IC-Single-core/Gekkonidae.sv Line: 329
-    Info (12023): Found entity 11: full_decoder File: C:/github/IC-Single-core/Gekkonidae.sv Line: 385
-    Info (12023): Found entity 12: Gekkonidae File: C:/github/IC-Single-core/Gekkonidae.sv Line: 422
-Info (12021): Found 2 design units, including 2 entities, in source file test.sv
-    Info (12023): Found entity 1: test File: C:/github/IC-Single-core/test.sv Line: 1
-    Info (12023): Found entity 2: test_concat File: C:/github/IC-Single-core/test.sv Line: 10
-Info (12021): Found 1 design units, including 1 entities, in source file tb_main_decoder.sv
-    Info (12023): Found entity 1: tb_main_decoder File: C:/github/IC-Single-core/tb_main_decoder.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file tb_alu_decoder.sv
-    Info (12023): Found entity 1: tb_alu_decoder File: C:/github/IC-Single-core/tb_alu_decoder.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file tb_full_decoder.sv
-    Info (12023): Found entity 1: tb_full_decoder File: C:/github/IC-Single-core/tb_full_decoder.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file tb_gekkonidae.sv
-    Info (12023): Found entity 1: tb_gekkonidae File: C:/github/IC-Single-core/tb_gekkonidae.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file tb_test_concat.sv
-    Info (12023): Found entity 1: tb_test_concat File: C:/github/IC-Single-core/tb_test_concat.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file tb_data_mem.sv
-    Info (12023): Found entity 1: tb_data_mem File: C:/github/IC-Single-core/tb_data_mem.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file instr_mem_rom.v
-    Info (12023): Found entity 1: instr_mem_rom File: C:/github/IC-Single-core/instr_mem_rom.v Line: 40
-Info (12021): Found 1 design units, including 1 entities, in source file data_instr.v
-    Info (12023): Found entity 1: data_instr File: C:/github/IC-Single-core/data_instr.v Line: 40
-Info (12127): Elaborating entity "Gekkonidae" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Gekkonidae.sv(461): object "branch" assigned a value but never read File: C:/github/IC-Single-core/Gekkonidae.sv Line: 461
-Warning (10034): Output port "instruction_mem_data_out_debug" at Gekkonidae.sv(436) has no driver File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-Warning (10034): Output port "data_mem_data_out_debug" at Gekkonidae.sv(445) has no driver File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-Info (12128): Elaborating entity "pc_sum" for hierarchy "pc_sum:pc_sum_four" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 495
-Warning (10230): Verilog HDL assignment warning at Gekkonidae.sv(161): truncated value with size 32 to match size of target (16) File: C:/github/IC-Single-core/Gekkonidae.sv Line: 161
-Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:program_counter" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 503
-Info (12128): Elaborating entity "instr_mem_rom" for hierarchy "instr_mem_rom:instr_mem_rom" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 511
-Info (12128): Elaborating entity "altsyncram" for hierarchy "instr_mem_rom:instr_mem_rom|altsyncram:altsyncram_component" File: C:/github/IC-Single-core/instr_mem_rom.v Line: 82
-Info (12130): Elaborated megafunction instantiation "instr_mem_rom:instr_mem_rom|altsyncram:altsyncram_component" File: C:/github/IC-Single-core/instr_mem_rom.v Line: 82
-Info (12133): Instantiated megafunction "instr_mem_rom:instr_mem_rom|altsyncram:altsyncram_component" with the following parameter: File: C:/github/IC-Single-core/instr_mem_rom.v Line: 82
-    Info (12134): Parameter "address_aclr_a" = "NONE"
-    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
-    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "isntr_mem.hex"
-    Info (12134): Parameter "intended_device_family" = "Cyclone V"
-    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
-    Info (12134): Parameter "lpm_type" = "altsyncram"
-    Info (12134): Parameter "numwords_a" = "128"
-    Info (12134): Parameter "operation_mode" = "ROM"
-    Info (12134): Parameter "outdata_aclr_a" = "NONE"
-    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
-    Info (12134): Parameter "widthad_a" = "7"
-    Info (12134): Parameter "width_a" = "32"
-    Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_6hg1.tdf
-    Info (12023): Found entity 1: altsyncram_6hg1 File: C:/github/IC-Single-core/db/altsyncram_6hg1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_6hg1" for hierarchy "instr_mem_rom:instr_mem_rom|altsyncram:altsyncram_component|altsyncram_6hg1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "register_file" for hierarchy "register_file:register_file" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 538
-Info (12128): Elaborating entity "extend_unit" for hierarchy "extend_unit:extend_unit" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 548
-Info (12128): Elaborating entity "mux_2to1" for hierarchy "mux_2to1:sel_src_b" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 557
-Info (12128): Elaborating entity "alu" for hierarchy "alu:alu" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 567
-Info (12128): Elaborating entity "data_instr" for hierarchy "data_instr:data_instr" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 577
-Info (12128): Elaborating entity "altsyncram" for hierarchy "data_instr:data_instr|altsyncram:altsyncram_component" File: C:/github/IC-Single-core/data_instr.v Line: 86
-Info (12130): Elaborated megafunction instantiation "data_instr:data_instr|altsyncram:altsyncram_component" File: C:/github/IC-Single-core/data_instr.v Line: 86
-Info (12133): Instantiated megafunction "data_instr:data_instr|altsyncram:altsyncram_component" with the following parameter: File: C:/github/IC-Single-core/data_instr.v Line: 86
-    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
-    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "data_instr.hex"
-    Info (12134): Parameter "intended_device_family" = "Cyclone V"
-    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
-    Info (12134): Parameter "lpm_type" = "altsyncram"
-    Info (12134): Parameter "numwords_a" = "128"
-    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
-    Info (12134): Parameter "outdata_aclr_a" = "NONE"
-    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
-    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
-    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
-    Info (12134): Parameter "widthad_a" = "7"
-    Info (12134): Parameter "width_a" = "32"
-    Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hso1.tdf
-    Info (12023): Found entity 1: altsyncram_hso1 File: C:/github/IC-Single-core/db/altsyncram_hso1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_hso1" for hierarchy "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "full_decoder" for hierarchy "full_decoder:full_decoder" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 615
-Info (12128): Elaborating entity "main_decoder" for hierarchy "full_decoder:full_decoder|main_decoder:main_decoder" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 402
-Info (12128): Elaborating entity "alu_decoder" for hierarchy "full_decoder:full_decoder|alu_decoder:alu_decoder" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 410
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "register_file:register_file|regs" is uninferred due to asynchronous read logic File: C:/github/IC-Single-core/Gekkonidae.sv Line: 88
-Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13049): Converted tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|alu_op[0]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 285
-    Warning (13049): Converted tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|alu_op[1]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 285
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[0]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[1]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[2]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[3]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[4]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[5]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[6]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[7]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[8]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[9]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[10]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[11]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[12]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[13]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[14]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[15]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[16]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[17]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[18]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[19]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[20]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[21]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[22]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[23]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[24]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[25]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[26]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[27]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[28]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[29]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[30]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-    Warning (13049): Converted tri-state buffer "register_file:register_file|data1_out[31]" feeding internal logic into a wire File: C:/github/IC-Single-core/Gekkonidae.sv Line: 84
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[31]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[30]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[29]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[28]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[27]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[26]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[25]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[24]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[23]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[22]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[21]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[20]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[19]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[18]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[17]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[16]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[15]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[14]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[13]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[12]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[11]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[10]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[9]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[8]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[7]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[6]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[5]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[4]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[3]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[2]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[1]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[0]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|always0" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[1]" to the node "extend_unit:extend_unit|Decoder0" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[2]" to the node "extend_unit:extend_unit|Decoder0" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[3]" to the node "mux_2to1:sel_src_b|out[0]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[4]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[0]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[5]" to the node "mux_2to1:sel_reg_wr|out[0]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|alu_decoder:alu_decoder|alu_control[0]" to the node "alu:alu|Mux30" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 336
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|alu_decoder:alu_decoder|alu_control[1]" to the node "alu:alu|Mux30" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 336
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|alu_decoder:alu_decoder|alu_control[2]" to the node "mux_2to1:sel_reg_wr|out[30]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 336
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[0]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[0]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[1]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[1]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[2]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[2]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[3]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[3]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[4]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[4]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[5]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[5]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[6]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[6]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[7]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[7]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[8]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[8]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[9]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[9]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[10]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[10]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[11]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[11]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[12]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[12]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[13]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[13]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[14]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[14]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[15]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[15]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[16]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[16]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[17]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[17]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[18]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[18]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[19]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[19]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[20]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[20]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[21]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[21]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[22]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[22]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[23]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[23]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[24]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[24]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[25]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[25]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[26]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[26]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[27]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[27]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[28]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[28]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[29]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[29]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[30]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[30]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "register_file:register_file|data2_out[31]" to the node "data_instr:data_instr|altsyncram:altsyncram_component|altsyncram_hso1:auto_generated|q_a[31]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[31]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[30]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[29]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[28]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[27]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[26]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[25]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[24]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[23]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[22]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[21]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[20]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[19]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[18]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[17]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[16]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[15]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[14]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[13]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[12]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[11]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[10]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[9]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[8]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[7]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[6]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[5]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[4]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[3]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[2]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[1]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-    Warning (13047): Converted the fan-out from the tri-state buffer "full_decoder:full_decoder|main_decoder:main_decoder|control_word[0]" to the node "register_file:register_file|data2_out[0]" into an OR gate File: C:/github/IC-Single-core/Gekkonidae.sv Line: 287
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "instruction_mem_data_out_debug[0]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[1]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[2]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[3]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[4]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[5]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[6]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[7]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[8]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[9]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[10]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[11]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[12]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[13]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[14]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[15]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[16]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[17]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[18]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[19]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[20]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[21]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[22]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[23]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[24]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[25]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[26]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[27]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[28]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[29]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[30]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "instruction_mem_data_out_debug[31]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 436
-    Warning (13410): Pin "data_mem_data_out_debug[0]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[1]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[2]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[3]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[4]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[5]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[6]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[7]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[8]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[9]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[10]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[11]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[12]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[13]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[14]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[15]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[16]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[17]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[18]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[19]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[20]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[21]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[22]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[23]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[24]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[25]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[26]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[27]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[28]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[29]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[30]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
-    Warning (13410): Pin "data_mem_data_out_debug[31]" is stuck at GND File: C:/github/IC-Single-core/Gekkonidae.sv Line: 445
+Info (12021): Found 20 design units, including 20 entities, in source file gekkonidae.sv
+    Info (12023): Found entity 1: adder File: C:/github/IC-Single-core/Gekkonidae.sv Line: 12
+    Info (12023): Found entity 2: flopr File: C:/github/IC-Single-core/Gekkonidae.sv Line: 21
+    Info (12023): Found entity 3: flopenr File: C:/github/IC-Single-core/Gekkonidae.sv Line: 31
+    Info (12023): Found entity 4: mux2 File: C:/github/IC-Single-core/Gekkonidae.sv Line: 43
+    Info (12023): Found entity 5: mux3 File: C:/github/IC-Single-core/Gekkonidae.sv Line: 51
+    Info (12023): Found entity 6: alu File: C:/github/IC-Single-core/Gekkonidae.sv Line: 61
+    Info (12023): Found entity 7: regfile File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
+    Info (12023): Found entity 8: extend File: C:/github/IC-Single-core/Gekkonidae.sv Line: 104
+    Info (12023): Found entity 9: hazard_unit File: C:/github/IC-Single-core/Gekkonidae.sv Line: 122
+    Info (12023): Found entity 10: controller File: C:/github/IC-Single-core/Gekkonidae.sv Line: 168
+    Info (12023): Found entity 11: maindec File: C:/github/IC-Single-core/Gekkonidae.sv Line: 231
+    Info (12023): Found entity 12: aludec File: C:/github/IC-Single-core/Gekkonidae.sv Line: 256
+    Info (12023): Found entity 13: fetch_unit File: C:/github/IC-Single-core/Gekkonidae.sv Line: 281
+    Info (12023): Found entity 14: rf_unit File: C:/github/IC-Single-core/Gekkonidae.sv Line: 298
+    Info (12023): Found entity 15: execute_unit File: C:/github/IC-Single-core/Gekkonidae.sv Line: 318
+    Info (12023): Found entity 16: datapath File: C:/github/IC-Single-core/Gekkonidae.sv Line: 344
+    Info (12023): Found entity 17: rvpipeline File: C:/github/IC-Single-core/Gekkonidae.sv Line: 454
+    Info (12023): Found entity 18: top File: C:/github/IC-Single-core/Gekkonidae.sv Line: 485
+    Info (12023): Found entity 19: imem File: C:/github/IC-Single-core/Gekkonidae.sv Line: 502
+    Info (12023): Found entity 20: dmem File: C:/github/IC-Single-core/Gekkonidae.sv Line: 514
+Warning (10229): Verilog HDL Expression warning at tb_gekkonidae.sv(90): truncated literal to match 31 bits File: C:/github/IC-Single-core/tb_gekkonidae.sv Line: 90
+Info (12021): Found 3 design units, including 3 entities, in source file tb_gekkonidae.sv
+    Info (12023): Found entity 1: tb_rvpipeline File: C:/github/IC-Single-core/tb_gekkonidae.sv Line: 1
+    Info (12023): Found entity 2: tb_fetch File: C:/github/IC-Single-core/tb_gekkonidae.sv Line: 45
+    Info (12023): Found entity 3: tb_test File: C:/github/IC-Single-core/tb_gekkonidae.sv Line: 82
+Warning (10236): Verilog HDL Implicit Net warning at Gekkonidae.sv(187): created implicit net for "ResulSrcE0" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 187
+Warning (10236): Verilog HDL Implicit Net warning at Gekkonidae.sv(312): created implicit net for "clk" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 312
+Warning (10236): Verilog HDL Implicit Net warning at Gekkonidae.sv(479): created implicit net for "PcSrcE" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 479
+Info (12127): Elaborating entity "fetch_unit" for the top level hierarchy
+Info (12128): Elaborating entity "mux2" for hierarchy "mux2:pcmux" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 290
+Info (12128): Elaborating entity "flopenr" for hierarchy "flopenr:pcreg" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 292
+Info (12128): Elaborating entity "adder" for hierarchy "adder:pcadd4" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 294
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/github/IC-Single-core/output_files/Gekkonidae.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 80 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "instruction_mem_enable_write_debug" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 430
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[0]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[1]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[2]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[3]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[4]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[5]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[6]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[7]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[8]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[9]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[10]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[11]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[12]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[13]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[14]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[15]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[16]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[17]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[18]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[19]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[20]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[21]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[22]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[23]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[24]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[25]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[26]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[27]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[28]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[29]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[30]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_data_debug[31]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 431
-    Warning (15610): No output dependent on input pin "instruction_mem_write_address_debug[0]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 432
-    Warning (15610): No output dependent on input pin "instruction_mem_write_address_debug[1]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 432
-    Warning (15610): No output dependent on input pin "instruction_mem_write_address_debug[2]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 432
-    Warning (15610): No output dependent on input pin "instruction_mem_write_address_debug[3]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 432
-    Warning (15610): No output dependent on input pin "instruction_mem_write_address_debug[4]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 432
-    Warning (15610): No output dependent on input pin "instruction_mem_write_address_debug[5]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 432
-    Warning (15610): No output dependent on input pin "instruction_mem_write_address_debug[6]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 432
-    Warning (15610): No output dependent on input pin "data_mem_read_address_debug[0]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 440
-    Warning (15610): No output dependent on input pin "data_mem_read_address_debug[1]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 440
-    Warning (15610): No output dependent on input pin "data_mem_read_address_debug[2]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 440
-    Warning (15610): No output dependent on input pin "data_mem_read_address_debug[3]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 440
-    Warning (15610): No output dependent on input pin "data_mem_read_address_debug[4]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 440
-    Warning (15610): No output dependent on input pin "data_mem_read_address_debug[5]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 440
-    Warning (15610): No output dependent on input pin "data_mem_read_address_debug[6]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 440
-    Warning (15610): No output dependent on input pin "data_mem_enable_read_debug" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 441
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[0]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[1]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[2]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[3]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[4]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[5]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[6]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[7]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[8]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[9]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[10]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[11]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[12]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[13]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[14]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[15]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[16]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[17]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[18]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[19]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[20]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[21]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[22]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[23]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[24]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[25]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[26]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[27]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[28]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[29]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[30]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-    Warning (15610): No output dependent on input pin "data_mem_write_data_debug[31]" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 442
-Info (21057): Implemented 2290 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 82 input pins
-    Info (21059): Implemented 123 output pins
-    Info (21061): Implemented 2021 logic cells
-    Info (21064): Implemented 64 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 292 warnings
-    Info: Peak virtual memory: 4923 megabytes
-    Info: Processing ended: Fri Jan 17 18:00:27 2025
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:09
+Info (21057): Implemented 163 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 36 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 63 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4874 megabytes
+    Info: Processing ended: Thu Feb 20 10:24:40 2025
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:14
 
 
 +------------------------------------------+

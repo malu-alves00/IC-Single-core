@@ -1,0 +1,623 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/github/IC-Single-core/simulation/questa
+T_opt
+!s110 1740058714
+VibS`RA1N^I;]PzC`?Kl<?2
+04 13 4 work tb_rvpipeline fast 0
+=1-74563c6137ac-67b7305a-6f-3b70
+R0
+!s12b OEM100
+!s124 OEM10U24 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vadder
+Z3 2C:/github/IC-Single-core/Gekkonidae.sv
+Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z5 !s110 1740058713
+!i10b 1
+!s100 8XL^dMY<8O1_X7bc1;U4C0
+IDahXl6D9FFL?@l]dFKA532
+S1
+R1
+Z6 w1740057872
+Z7 8C:/github/IC-Single-core/Gekkonidae.sv
+Z8 FC:/github/IC-Single-core/Gekkonidae.sv
+!i122 0
+L0 12 6
+Z9 VDg1SIo80bB@j0V0VzS_@n1
+Z10 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z11 !s108 1740058713.000000
+Z12 !s107 C:/github/IC-Single-core/Gekkonidae.sv|
+Z13 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/github/IC-Single-core|C:/github/IC-Single-core/Gekkonidae.sv|
+!i113 0
+Z14 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z15 !s92 -sv -work work +incdir+C:/github/IC-Single-core -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+valu
+R3
+R4
+R5
+!i10b 1
+!s100 Q9`ZJc6FW>Ng=YZ<IZNe31
+IWHSAnT7@mIUo3TZM:VnKT0
+S1
+R1
+R6
+R7
+R8
+!i122 0
+L0 61 21
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R2
+valudec
+R3
+R4
+R5
+!i10b 1
+!s100 1?YNijdeSM8>WI:ogVnYc3
+IooemXkD<PVVlB^MUWlCg<3
+S1
+R1
+R6
+R7
+R8
+!i122 0
+L0 256 22
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R2
+vcontroller
+R3
+R4
+R5
+!i10b 1
+!s100 g=2z[e41:163F[>5O]ig@2
+I:=T:9`3@h2R4Vi62zLeX=1
+S1
+R1
+R6
+R7
+R8
+!i122 0
+L0 168 61
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R2
+vdatapath
+R3
+R4
+R5
+!i10b 1
+!s100 U:j;1kCLK=IE:D81eND^@0
+Il5g9QX5Vke;gnii5oUMCA0
+S1
+R1
+R6
+R7
+R8
+!i122 0
+L0 344 107
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R2
+vdmem
+R3
+R4
+R5
+!i10b 1
+!s100 ?VVM<ICGiJj]ag5fkbK`m1
+I8D<Hh<XGQa@L70a6CdH:<3
+S1
+R1
+R6
+R7
+R8
+!i122 0
+L0 514 13
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R2
+vexecute_unit
+R3
+R4
+R5
+!i10b 1
+!s100 zjbHn0Nk^7coHFQ_5gkbH1
+I0ZJkJH;zhkmAlAzm^BKF23
+S1
+R1
+R6
+R7
+R8
+!i122 0
+L0 318 24
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R2
+vextend
+R3
+R4
+R5
+!i10b 1
+!s100 ^nV6KGlNne?`XI?U7lhQi0
+Ial>W6C^C4lmon585I8f3i3
+S1
+R1
+R6
+R7
+R8
+!i122 0
+L0 104 14
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R2
+vfetch_unit
+R3
+R4
+R5
+!i10b 1
+!s100 gT0cO^=n7gV;Hk@@?WOEh2
+IUhmXnf]zCoJP_ZLdzNG6J1
+S1
+R1
+R6
+R7
+R8
+!i122 0
+L0 281 16
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R2
+vflopenr
+R3
+R4
+R5
+!i10b 1
+!s100 AzGj6iCI;5U4Q]Zj2a_Y[3
+I=fZOj@b3=RmiihX_McK_I3
+S1
+R1
+R6
+R7
+R8
+!i122 0
+L0 31 9
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R2
+vflopr
+R3
+R4
+R5
+!i10b 1
+!s100 1gl2IQLoJ[R]:O?e`n6:B0
+IfiZHQ5h]`7G<Ol7D_^gk62
+S1
+R1
+R6
+R7
+R8
+!i122 0
+L0 21 9
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R2
+vhazard_unit
+R3
+R4
+R5
+!i10b 1
+!s100 i;e;>Tjz0S?MdS]?ck6IT2
+Ie4:EDGRii1R5;1=Ch6l^90
+S1
+R1
+R6
+R7
+R8
+!i122 0
+L0 122 42
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R2
+vimem
+R3
+R4
+R5
+!i10b 1
+!s100 34H3Z3MLVT;=_X3aH:MeX3
+IE`JN28<CAd68055Ai8gAm0
+S1
+R1
+R6
+R7
+R8
+!i122 0
+L0 502 11
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R2
+vmaindec
+R3
+R4
+R5
+!i10b 1
+!s100 2RdcSmFKJ^OOhl_3=Q@kh1
+IX12RUl9@8oT7NUCN1XkXZ2
+S1
+R1
+R6
+R7
+R8
+!i122 0
+L0 231 22
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R2
+vmux2
+R3
+R4
+R5
+!i10b 1
+!s100 PnH@DPW:92B9]W1mR@[OX2
+IW;abWSRIF:ebc5[kAPILS2
+S1
+R1
+R6
+R7
+R8
+!i122 0
+L0 43 7
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R2
+vmux3
+R3
+R4
+R5
+!i10b 1
+!s100 b>?k3lSSOJ80?<o_oV?j93
+I]T:[5Z9Ck[Vj715O]]G>e1
+S1
+R1
+R6
+R7
+R8
+!i122 0
+L0 51 7
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R2
+vregfile
+R3
+R4
+R5
+!i10b 1
+!s100 NRUL^PKh876K[JfXR:3?K3
+IIk;1VW4@ciSMEBRCI_zLe1
+S1
+R1
+R6
+R7
+R8
+!i122 0
+L0 86 15
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R2
+vrf_unit
+R3
+R4
+R5
+!i10b 1
+!s100 8`;?i7I2ghb4`N:B1WGV71
+I6Fg6U>jgeAREbEG`QQ4Wf1
+S1
+R1
+R6
+R7
+R8
+!i122 0
+L0 298 19
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R2
+vrvpipeline
+R3
+R4
+R5
+!i10b 1
+!s100 UF<594f]UZ=HWGkG^^9MD1
+IPJ@O>Y@l2kkdc:SM]k`I@2
+S1
+R1
+R6
+R7
+R8
+!i122 0
+L0 454 28
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R2
+vtb_fetch
+Z16 2C:/github/IC-Single-core/tb_gekkonidae.sv
+R4
+R5
+!i10b 1
+!s100 0zHJi9h=O<nQjjna3dFz:2
+IZ_9dTafezkQCZ8iTHO;G_1
+S1
+R1
+Z17 w1740055989
+Z18 8C:/github/IC-Single-core/tb_gekkonidae.sv
+Z19 FC:/github/IC-Single-core/tb_gekkonidae.sv
+!i122 1
+L0 45 36
+R9
+R10
+r1
+!s85 0
+31
+R11
+Z20 !s107 C:/github/IC-Single-core/tb_gekkonidae.sv|
+Z21 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/github/IC-Single-core|C:/github/IC-Single-core/tb_gekkonidae.sv|
+!i113 0
+R14
+R15
+R2
+vtb_rvpipeline
+R16
+R4
+R5
+!i10b 1
+!s100 c5Ybb5NCT]2ORRDfdnkLG3
+I[GeHK9oaR522COHBaSMng0
+S1
+R1
+R17
+R18
+R19
+!i122 1
+L0 1 42
+R9
+R10
+r1
+!s85 0
+31
+R11
+R20
+R21
+!i113 0
+R14
+R15
+R2
+vtb_test
+R16
+R4
+R5
+!i10b 1
+!s100 d3JYEP3@aL_m>WMhhl?G=2
+IBH:T:jNUTZ2AId`<7>P5b2
+S1
+R1
+R17
+R18
+R19
+!i122 1
+L0 82 29
+R9
+R10
+r1
+!s85 0
+31
+R11
+R20
+R21
+!i113 0
+R14
+R15
+R2
+vtop
+R3
+R4
+R5
+!i10b 1
+!s100 ?UlG5mM5d4koz>6b3GJbM3
+IDSnBJj7h@Mn28LW=L`Nog2
+S1
+R1
+R6
+R7
+R8
+!i122 0
+L0 485 14
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R2

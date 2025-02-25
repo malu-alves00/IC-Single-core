@@ -4,239 +4,263 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "control_word_debug[0]",
+					"name" : "pc[0]",
 					"strict" : false
 				},
 				{
-					"name" : "control_word_debug[1]",
+					"name" : "pc[1]",
 					"strict" : false
 				},
 				{
-					"name" : "control_word_debug[2]",
+					"name" : "pc[2]",
 					"strict" : false
 				},
 				{
-					"name" : "control_word_debug[3]",
+					"name" : "pc[3]",
 					"strict" : false
 				},
 				{
-					"name" : "control_word_debug[4]",
+					"name" : "pc[4]",
 					"strict" : false
 				},
 				{
-					"name" : "control_word_debug[5]",
+					"name" : "pc[5]",
 					"strict" : false
 				},
 				{
-					"name" : "control_word_debug[6]",
+					"name" : "pc[6]",
 					"strict" : false
 				},
 				{
-					"name" : "control_word_debug[7]",
+					"name" : "pc[7]",
 					"strict" : false
 				},
 				{
-					"name" : "control_word_debug[8]",
+					"name" : "pc[8]",
 					"strict" : false
 				},
 				{
-					"name" : "control_word_debug[9]",
+					"name" : "pc[9]",
 					"strict" : false
 				},
 				{
-					"name" : "control_word_debug[10]",
+					"name" : "pc[10]",
 					"strict" : false
 				},
 				{
-					"name" : "pc_value[0]",
+					"name" : "pc[11]",
 					"strict" : false
 				},
 				{
-					"name" : "pc_value[1]",
+					"name" : "pc[12]",
 					"strict" : false
 				},
 				{
-					"name" : "pc_value[2]",
+					"name" : "pc[13]",
 					"strict" : false
 				},
 				{
-					"name" : "pc_value[3]",
+					"name" : "pc[14]",
 					"strict" : false
 				},
 				{
-					"name" : "pc_value[4]",
+					"name" : "pc[15]",
 					"strict" : false
 				},
 				{
-					"name" : "pc_value[5]",
+					"name" : "pc[16]",
 					"strict" : false
 				},
 				{
-					"name" : "pc_value[6]",
+					"name" : "pc[17]",
 					"strict" : false
 				},
 				{
-					"name" : "pc_value[7]",
+					"name" : "pc[18]",
 					"strict" : false
 				},
 				{
-					"name" : "pc_value[8]",
+					"name" : "pc[19]",
 					"strict" : false
 				},
 				{
-					"name" : "pc_value[9]",
+					"name" : "pc[20]",
 					"strict" : false
 				},
 				{
-					"name" : "pc_value[10]",
+					"name" : "pc[21]",
 					"strict" : false
 				},
 				{
-					"name" : "pc_value[11]",
+					"name" : "pc[22]",
 					"strict" : false
 				},
 				{
-					"name" : "pc_value[12]",
+					"name" : "pc[23]",
 					"strict" : false
 				},
 				{
-					"name" : "pc_value[13]",
+					"name" : "pc[24]",
 					"strict" : false
 				},
 				{
-					"name" : "pc_value[14]",
+					"name" : "pc[25]",
 					"strict" : false
 				},
 				{
-					"name" : "pc_value[15]",
+					"name" : "pc[26]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[0]",
+					"name" : "pc[27]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[1]",
+					"name" : "pc[28]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[2]",
+					"name" : "pc[29]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[3]",
+					"name" : "pc[30]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[4]",
+					"name" : "pc[31]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[5]",
+					"name" : "PCPlus4[0]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[6]",
+					"name" : "PCPlus4[1]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[7]",
+					"name" : "PCPlus4[2]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[8]",
+					"name" : "PCPlus4[3]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[9]",
+					"name" : "PCPlus4[4]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[10]",
+					"name" : "PCPlus4[5]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[11]",
+					"name" : "PCPlus4[6]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[12]",
+					"name" : "PCPlus4[7]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[13]",
+					"name" : "PCPlus4[8]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[14]",
+					"name" : "PCPlus4[9]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[15]",
+					"name" : "PCPlus4[10]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[16]",
+					"name" : "PCPlus4[11]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[17]",
+					"name" : "PCPlus4[12]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[18]",
+					"name" : "PCPlus4[13]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[19]",
+					"name" : "PCPlus4[14]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[20]",
+					"name" : "PCPlus4[15]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[21]",
+					"name" : "PCPlus4[16]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[22]",
+					"name" : "PCPlus4[17]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[23]",
+					"name" : "PCPlus4[18]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[24]",
+					"name" : "PCPlus4[19]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[25]",
+					"name" : "PCPlus4[20]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[26]",
+					"name" : "PCPlus4[21]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[27]",
+					"name" : "PCPlus4[22]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[28]",
+					"name" : "PCPlus4[23]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[29]",
+					"name" : "PCPlus4[24]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[30]",
+					"name" : "PCPlus4[25]",
 					"strict" : false
 				},
 				{
-					"name" : "out_reg_2_debug[31]",
+					"name" : "PCPlus4[26]",
+					"strict" : false
+				},
+				{
+					"name" : "PCPlus4[27]",
+					"strict" : false
+				},
+				{
+					"name" : "PCPlus4[28]",
+					"strict" : false
+				},
+				{
+					"name" : "PCPlus4[29]",
+					"strict" : false
+				},
+				{
+					"name" : "PCPlus4[30]",
+					"strict" : false
+				},
+				{
+					"name" : "PCPlus4[31]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[0]",
 					"strict" : false
 				},
 				{
@@ -245,6 +269,138 @@
 				},
 				{
 					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "PcSrc",
+					"strict" : false
+				},
+				{
+					"name" : "StallF",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[8]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[9]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[10]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[11]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[12]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[13]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[14]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[15]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[16]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[17]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[18]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[19]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[20]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[21]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[22]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[23]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[24]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[25]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[26]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[27]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[28]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[29]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[30]",
+					"strict" : false
+				},
+				{
+					"name" : "PCTarget[31]",
 					"strict" : false
 				}
 			]

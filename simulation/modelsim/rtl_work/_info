@@ -3,274 +3,394 @@ K3
 13
 cModel Technology
 Z0 dC:\github\IC-Single-core\simulation\modelsim
-valu
+vadder
 Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
-!i10b 1
-!s100 jU`ILUm>549^zLo66eHLE2
-Ie1bO6mP?2[kG`Igl1>61c1
-VjTa59THFe<kzY=E`5i2LC3
+IHkUd<9dI5Re0ZC;D>iJ`k2
+VR4:XbIkd<X908neF9?e9K1
 Z2 !s105 Gekkonidae_sv_unit
 S1
 Z3 dC:\github\IC-Single-core\simulation\modelsim
-Z4 w1737148419
+Z4 w1737492830
 Z5 8C:/github/IC-Single-core/Gekkonidae.sv
 Z6 FC:/github/IC-Single-core/Gekkonidae.sv
-L0 27
+L0 1
 Z7 OV;L;10.1d;51
 r1
-!s85 0
 31
-Z8 !s108 1737151519.678000
+Z8 !s108 1737495100.079000
 Z9 !s107 C:/github/IC-Single-core/Gekkonidae.sv|
 Z10 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/github/IC-Single-core|C:/github/IC-Single-core/Gekkonidae.sv|
-!s101 -O0
 Z11 o-sv -work work -O0
 Z12 !s92 -sv -work work +incdir+C:/github/IC-Single-core -O0
-valu_decoder
-R1
 !i10b 1
-!s100 E9LAGc<i?YBbUTf9F4<2?3
-I@ZBRcENKhgaEn9o5?2@hh3
-VFS:iY^j<>J9=_3F]j0e`S0
+!s100 >bWQ79?ZTPHD1b<jH0Ck]3
+!s85 0
+!s101 -O0
+valu
+R1
+I2hMAC`A`IA=;80zzhX=H^2
+VNhcc0`P=4DZ5U<0gW0HaH1
 R2
 S1
 R3
 R4
 R5
 R6
-L0 249
+L0 46
 R7
 r1
-!s85 0
 31
 R8
 R9
 R10
-!s101 -O0
 R11
 R12
-vdata_instr
-IHaCDT<;iKW6l7=YG<7eTd3
-VglN>0NbGQDe0BE7RO_lDV1
-R3
-w1737147166
-8C:/github/IC-Single-core/data_instr.v
-FC:/github/IC-Single-core/data_instr.v
-L0 40
-R7
-r1
-31
-Z13 o-vlog01compat -work work -O0
-Z14 !s92 -vlog01compat -work work +incdir+C:/github/IC-Single-core -O0
 !i10b 1
-!s100 joeaeWK^bN?4lgMB4H7;B1
+!s100 ScY0^SjR^lD0ZT?[]ib:I3
 !s85 0
-!s108 1737151519.635000
-!s107 C:/github/IC-Single-core/data_instr.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/github/IC-Single-core|C:/github/IC-Single-core/data_instr.v|
 !s101 -O0
-vextend_unit
+valudec
 R1
-!i10b 1
-!s100 8cFBHZ3[?dj^B;PRFQ4_i0
-IA3cg;zoUGJn0:Q7WC430C3
-Va6;k9il>H=k@^5f1LTaF10
+Ing;8je;0UN6Y_he=feln[2
+VO;MmMIF;HPiSScF=UfFR>3
 R2
 S1
 R3
 R4
 R5
 R6
-L0 171
+L0 145
 R7
 r1
-!s85 0
 31
 R8
 R9
 R10
-!s101 -O0
 R11
 R12
-vfull_decoder
-R1
 !i10b 1
-!s100 `C3c9U^iEmQfGD5fRZk6l1
-I[>ofIGzKS2HCl8SgQ^DOb2
-VZlm<=jGL2;kOP2F4acSYb0
+!s100 Q=LAnf?1Yk9?fB19RGE1M3
+!s85 0
+!s101 -O0
+vcontroller
+R1
+I]n@aWA9^Wi@=V4HZ^AB8C0
+VKo:YT7P8iXe=>nD3SP1[f2
 R2
 S1
 R3
 R4
 R5
 R6
-L0 305
+L0 82
 R7
 r1
-!s85 0
 31
 R8
 R9
 R10
-!s101 -O0
 R11
 R12
-vGekkonidae
-R1
 !i10b 1
-!s100 `[dn2l<[lGLU=D^j`I;a:3
-I9YmnE5>o2CC=OPQfQo>jj1
-VS:i`G5^4R6On2Seo4?lmQ3
+!s100 nJehWb4fSVj3aBg9bn9e52
+!s85 0
+!s101 -O0
+vdatapath
+R1
+IfKD^E540^h2]DQ^haJ9hX2
+V5YUgZed2L:]hDlG1UjSgI2
 R2
 S1
 R3
 R4
 R5
 R6
-L0 342
+L0 170
 R7
 r1
-!s85 0
 31
 R8
 R9
 R10
-!s101 -O0
 R11
 R12
-n@gekkonidae
-vinstr_mem_rom
-Ih0Wlg4NJg=4o[m6FYjf;M2
-VJ4F<;]5WNX3dOm@bkilEQ1
-R3
-w1737146664
-8C:/github/IC-Single-core/instr_mem_rom.v
-FC:/github/IC-Single-core/instr_mem_rom.v
-L0 40
-R7
-r1
-31
-R13
-R14
 !i10b 1
-!s100 dAg?z<;]BZGB@6AA56XMO0
+!s100 T4f;O3O64CVHm4OmC0CF^3
 !s85 0
-!s108 1737151519.588000
-!s107 C:/github/IC-Single-core/instr_mem_rom.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/github/IC-Single-core|C:/github/IC-Single-core/instr_mem_rom.v|
 !s101 -O0
-vmain_decoder
+vdmem
 R1
-!i10b 1
-!s100 igY@<d9hB4PHnGC=0kZ4f1
-I7z[mMfQb=3nBUGG:IYZLQ1
-V^dFhI3boSf8QDBXBm?HHM1
+IP9oZYmjJG_Q97FD`;PmIb2
+V09OGzlPeaYS`EJSH7=l6?2
 R2
 S1
 R3
 R4
 R5
 R6
-L0 203
+L0 259
 R7
 r1
-!s85 0
 31
 R8
 R9
 R10
-!s101 -O0
 R11
 R12
-vmux_2to1
-R1
 !i10b 1
-!s100 f_d>:D@3f9ch5WYa[FzjF0
-Ic]jk7f2PWc=PnC7hmcU2[2
-VP[e_6L2=U6f@2moFj=V590
+!s100 <HS]l=cLaVJ<K@iEU<@@g1
+!s85 0
+!s101 -O0
+vextend
+R1
+IIzF_DHR?j;@cRS7;_1EKN3
+Vm1jNmdJaFKeIL51?k@0J40
 R2
 S1
 R3
 R4
 R5
 R6
-L0 4
+L0 101
 R7
 r1
-!s85 0
 31
 R8
 R9
 R10
-!s101 -O0
 R11
 R12
-vpc_sum
-R1
 !i10b 1
-!s100 6>DGC1bz<aDzWUhO61acF0
-IOE80ke8j]SilKYo4jCXhD3
-Vn81dFfn1W_2;n_nQHg2H;1
+!s100 B<8OWb`2bhbfJOgO6hA;o1
+!s85 0
+!s101 -O0
+vflopenr
+R1
+I=JZCHiMPTCE6;`X_[I6c>2
+Vl[@31Ka9Wak9oGo?2I58:3
 R2
 S1
 R3
 R4
 R5
 R6
-L0 151
+L0 18
 R7
 r1
-!s85 0
 31
 R8
 R9
 R10
-!s101 -O0
 R11
 R12
-vprogram_counter
-R1
 !i10b 1
-!s100 @FAOo4NnChC=fC^kZIo1>2
-IX5`R;5<g=[P@_akiili0k1
-VdbQgCP]blXBWm6Fom<2KR0
+!s100 5@4il>Cf[ZAm82bR:kNVQ0
+!s85 0
+!s101 -O0
+vflopr
+R1
+Ia:@NXO3cZn7:_N=<Gm=EK3
+VKfe>keNPnLBlHh<KCg1o52
 R2
 S1
 R3
 R4
 R5
 R6
-L0 107
+L0 8
 R7
 r1
-!s85 0
 31
 R8
 R9
 R10
-!s101 -O0
 R11
 R12
-vregister_file
-R1
 !i10b 1
-!s100 J5?R;AaJBLdEl_Xfj[JI_3
-IYil:ffdo6o3[E]RdI][S;2
-V2SX4S^cc]PO4SW1C1c5c61
+!s100 W__jIc0=^8ohKG6d3OWA43
+!s85 0
+!s101 -O0
+vimem
+R1
+IOi0gDd0i>JHGJ22K;dGe;2
+VMWGIHmGT5PSCn6JZe;^i[0
 R2
 S1
 R3
 R4
 R5
 R6
-L0 73
+L0 247
 R7
 r1
-!s85 0
 31
 R8
 R9
 R10
+R11
+R12
+!i10b 1
+!s100 o]YMj:21JIc1o:R7iGFW>0
+!s85 0
+!s101 -O0
+vmaindec
+R1
+ISJzRT[eH[nTcK>c4b;oT40
+V^=RW8@P;Gdk?mmI8f[_Na3
+R2
+S1
+R3
+R4
+R5
+R6
+L0 120
+R7
+r1
+31
+R8
+R9
+R10
+R11
+R12
+!i10b 1
+!s100 BjG?WDRU[N[?ildckBiNO0
+!s85 0
+!s101 -O0
+vmux2
+R1
+Ii`8b8k;ThA^BS?XTHXD`I3
+VT8RWJBjAIeM]>7U=5kBkT1
+R2
+S1
+R3
+R4
+R5
+R6
+L0 30
+R7
+r1
+31
+R8
+R9
+R10
+R11
+R12
+!i10b 1
+!s100 J4I;=HoYd=alL4J=BojH_3
+!s85 0
+!s101 -O0
+vmux3
+R1
+IzNN<I4Ak_aebFS]5hBLiS2
+VOUmeXZ?F<IJFMY21E797h2
+R2
+S1
+R3
+R4
+R5
+R6
+L0 38
+R7
+r1
+31
+R8
+R9
+R10
+R11
+R12
+!i10b 1
+!s100 :i:K84lUcd19<;NT?=@[<0
+!s85 0
+!s101 -O0
+vregfile
+R1
+I=4Ni72MYn^C9?DT?ZnNXS2
+VDGE_mRhGg05TQDf:<M<]@2
+R2
+S1
+R3
+R4
+R5
+R6
+L0 68
+R7
+r1
+31
+R8
+R9
+R10
+R11
+R12
+!i10b 1
+!s100 Q9K52b`L3R_4252l9oFb93
+!s85 0
+!s101 -O0
+vriscvsingle
+R1
+IVI8Y9m<n@dF1JfG@X6L`33
+V_IdRYc1WzS61U;`lcWKWV3
+R2
+S1
+R3
+R4
+R5
+R6
+L0 208
+R7
+r1
+31
+R8
+R9
+R10
+R11
+R12
+!i10b 1
+!s100 l<7:U_<;b9P8Z1e@1LiD^2
+!s85 0
+!s101 -O0
+vtb_gekkonidae
+R1
+!i10b 1
+!s100 iJ1X:6f9Qf0kL5gXm=`=N2
+I0;NBnKiGdP5@b97@hRP450
+V<kMVH8hR8nkk1z_=XDAgm0
+!s105 tb_gekkonidae_sv_unit
+S1
+R3
+w1737489827
+8C:/github/IC-Single-core/tb_gekkonidae.sv
+FC:/github/IC-Single-core/tb_gekkonidae.sv
+L0 1
+R7
+r1
+!s85 0
+31
+!s108 1737495100.208000
+!s107 C:/github/IC-Single-core/tb_gekkonidae.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/github/IC-Single-core|C:/github/IC-Single-core/tb_gekkonidae.sv|
 !s101 -O0
 R11
 R12
+vtop
+R1
+I^mL9GRdz@O<j`O`fR^kR`1
+V600R3;49fJLWoLPdBQnjM3
+R2
+S1
+R3
+R4
+R5
+R6
+L0 227
+R7
+r1
+31
+R8
+R9
+R10
+R11
+R12
+!i10b 1
+!s100 ;2fafQzMz=I>XX2FDzZEk1
+!s85 0
+!s101 -O0

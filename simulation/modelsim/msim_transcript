@@ -451,3 +451,338 @@
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # 
 # Top level modules:
+# vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/20.1/quartus/eda/sim_lib/cyclonev_atoms.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling UDP CYCLONEV_PRIM_DFFE
+# -- Compiling UDP CYCLONEV_PRIM_DFFEAS
+# -- Compiling UDP CYCLONEV_PRIM_DFFEAS_HIGH
+# -- Compiling module cyclonev_dffe
+# -- Compiling module cyclonev_mux21
+# -- Compiling module cyclonev_mux41
+# -- Compiling module cyclonev_and1
+# -- Compiling module cyclonev_and16
+# -- Compiling module cyclonev_bmux21
+# -- Compiling module cyclonev_b17mux21
+# -- Compiling module cyclonev_nmux21
+# -- Compiling module cyclonev_b5mux21
+# -- Compiling module cyclonev_ff
+# -- Compiling module cyclonev_lcell_comb
+# -- Compiling module cyclonev_routing_wire
+# -- Compiling module cyclonev_ram_block
+# -- Compiling module cyclonev_mlab_cell
+# -- Compiling module cyclonev_io_ibuf
+# -- Compiling module cyclonev_io_obuf
+# -- Compiling module cyclonev_ddio_out
+# -- Compiling module cyclonev_ddio_oe
+# -- Compiling module cyclonev_ddio_in
+# -- Compiling module cyclonev_io_pad
+# -- Compiling module cyclonev_pseudo_diff_out
+# -- Compiling module cyclonev_bias_logic
+# -- Compiling module cyclonev_bias_generator
+# -- Compiling module cyclonev_bias_block
+# -- Compiling module cyclonev_clk_phase_select
+# -- Compiling module cyclonev_clkena
+# -- Compiling module cyclonev_clkselect
+# -- Compiling module cyclonev_delay_chain
+# -- Compiling module cyclonev_dll_offset_ctrl
+# -- Compiling module cyclonev_dll
+# -- Compiling module cyclonev_dqs_config
+# -- Compiling module cyclonev_dqs_delay_chain
+# -- Compiling module cyclonev_dqs_enable_ctrl
+# -- Compiling module cyclonev_duty_cycle_adjustment
+# -- Compiling module cyclonev_fractional_pll
+# -- Compiling module cyclonev_half_rate_input
+# -- Compiling module cyclonev_input_phase_alignment
+# -- Compiling module cyclonev_io_clock_divider
+# -- Compiling module cyclonev_io_config
+# -- Compiling module cyclonev_leveling_delay_chain
+# -- Compiling module cyclonev_pll_dll_output
+# -- Compiling module cyclonev_pll_dpa_output
+# -- Compiling module cyclonev_pll_extclk_output
+# -- Compiling module cyclonev_pll_lvds_output
+# -- Compiling module cyclonev_pll_output_counter
+# -- Compiling module cyclonev_pll_reconfig
+# -- Compiling module cyclonev_pll_refclk_select
+# -- Compiling module cyclonev_termination_logic
+# -- Compiling module cyclonev_termination
+# -- Compiling module cyclonev_asmiblock
+# -- Compiling module cyclonev_chipidblock
+# -- Compiling module cyclonev_controller
+# -- Compiling module cyclonev_crcblock
+# -- Compiling module cyclonev_jtag
+# -- Compiling module cyclonev_prblock
+# -- Compiling module cyclonev_rublock
+# -- Compiling module cyclonev_tsdblock
+# -- Compiling module cyclonev_read_fifo
+# -- Compiling module cyclonev_read_fifo_read_enable
+# -- Compiling module cyclonev_phy_clkbuf
+# -- Compiling module cyclonev_ir_fifo_userdes
+# -- Compiling module cyclonev_read_fifo_read_clock_select
+# -- Compiling module cyclonev_lfifo
+# -- Compiling module cyclonev_vfifo
+# -- Compiling module cyclonev_mac
+# -- Compiling module cyclonev_mem_phy
+# -- Compiling module cyclonev_oscillator
+# -- Compiling module cyclonev_hps_interface_fpga2sdram
+# 
+# Top level modules:
+# 	cyclonev_dffe
+# 	cyclonev_mux41
+# 	cyclonev_and1
+# 	cyclonev_and16
+# 	cyclonev_bmux21
+# 	cyclonev_b17mux21
+# 	cyclonev_nmux21
+# 	cyclonev_b5mux21
+# 	cyclonev_ff
+# 	cyclonev_lcell_comb
+# 	cyclonev_routing_wire
+# 	cyclonev_ram_block
+# 	cyclonev_mlab_cell
+# 	cyclonev_io_ibuf
+# 	cyclonev_io_obuf
+# 	cyclonev_ddio_out
+# 	cyclonev_ddio_oe
+# 	cyclonev_ddio_in
+# 	cyclonev_io_pad
+# 	cyclonev_pseudo_diff_out
+# 	cyclonev_bias_block
+# 	cyclonev_clk_phase_select
+# 	cyclonev_clkena
+# 	cyclonev_clkselect
+# 	cyclonev_delay_chain
+# 	cyclonev_dll_offset_ctrl
+# 	cyclonev_dll
+# 	cyclonev_dqs_config
+# 	cyclonev_dqs_delay_chain
+# 	cyclonev_dqs_enable_ctrl
+# 	cyclonev_duty_cycle_adjustment
+# 	cyclonev_fractional_pll
+# 	cyclonev_half_rate_input
+# 	cyclonev_input_phase_alignment
+# 	cyclonev_io_clock_divider
+# 	cyclonev_io_config
+# 	cyclonev_leveling_delay_chain
+# 	cyclonev_pll_dll_output
+# 	cyclonev_pll_dpa_output
+# 	cyclonev_pll_extclk_output
+# 	cyclonev_pll_lvds_output
+# 	cyclonev_pll_output_counter
+# 	cyclonev_pll_reconfig
+# 	cyclonev_pll_refclk_select
+# 	cyclonev_termination_logic
+# 	cyclonev_termination
+# 	cyclonev_asmiblock
+# 	cyclonev_chipidblock
+# 	cyclonev_controller
+# 	cyclonev_crcblock
+# 	cyclonev_jtag
+# 	cyclonev_prblock
+# 	cyclonev_rublock
+# 	cyclonev_tsdblock
+# 	cyclonev_read_fifo
+# 	cyclonev_read_fifo_read_enable
+# 	cyclonev_phy_clkbuf
+# 	cyclonev_ir_fifo_userdes
+# 	cyclonev_read_fifo_read_clock_select
+# 	cyclonev_lfifo
+# 	cyclonev_vfifo
+# 	cyclonev_mac
+# 	cyclonev_mem_phy
+# 	cyclonev_oscillator
+# 	cyclonev_hps_interface_fpga2sdram
+# 
+# vlib verilog_libs/cyclonev_hssi_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/cyclonev_hssi_ver".
+# 
+# vmap cyclonev_hssi_ver ./verilog_libs/cyclonev_hssi_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/20.1/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/20.1/quartus/eda/sim_lib/cyclonev_hssi_atoms.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cyclonev_hssi_8g_pcs_aggregate
+# -- Compiling module cyclonev_hssi_8g_rx_pcs
+# -- Compiling module cyclonev_hssi_8g_tx_pcs
+# -- Compiling module cyclonev_hssi_common_pcs_pma_interface
+# -- Compiling module cyclonev_hssi_common_pld_pcs_interface
+# -- Compiling module cyclonev_hssi_pipe_gen1_2
+# -- Compiling module cyclonev_hssi_pma_aux
+# -- Compiling module cyclonev_hssi_pma_int
+# -- Compiling module cyclonev_hssi_pma_rx_buf
+# -- Compiling module cyclonev_hssi_pma_rx_deser
+# -- Compiling module cyclonev_hssi_pma_tx_buf
+# -- Compiling module cyclonev_hssi_pma_tx_cgb
+# -- Compiling module cyclonev_hssi_pma_tx_ser
+# -- Compiling module cyclonev_hssi_pma_cdr_refclk_select_mux
+# -- Compiling module cyclonev_hssi_rx_pcs_pma_interface
+# -- Compiling module cyclonev_hssi_rx_pld_pcs_interface
+# -- Compiling module cyclonev_hssi_tx_pcs_pma_interface
+# -- Compiling module cyclonev_hssi_tx_pld_pcs_interface
+# -- Compiling module cyclonev_hssi_refclk_divider
+# -- Compiling module cyclonev_pll_aux
+# -- Compiling module cyclonev_channel_pll
+# -- Compiling module cyclonev_hssi_avmm_interface
+# -- Compiling module cyclonev_hssi_pma_hi_pmaif
+# -- Compiling module cyclonev_hssi_pma_hi_xcvrif
+# -- Compiling module arriav_hssi_8g_pcs_aggregate
+# -- Compiling module arriav_hssi_8g_rx_pcs
+# -- Compiling module arriav_hssi_8g_tx_pcs
+# -- Compiling module arriav_hssi_common_pcs_pma_interface
+# -- Compiling module arriav_hssi_common_pld_pcs_interface
+# -- Compiling module arriav_hssi_pipe_gen1_2
+# -- Compiling module arriav_hssi_pma_aux
+# -- Compiling module arriav_hssi_pma_int
+# -- Compiling module arriav_hssi_pma_rx_buf
+# -- Compiling module arriav_hssi_pma_rx_deser
+# -- Compiling module arriav_hssi_pma_tx_buf
+# -- Compiling module arriav_hssi_pma_tx_cgb
+# -- Compiling module arriav_hssi_pma_tx_ser
+# -- Compiling module arriav_hssi_pma_cdr_refclk_select_mux
+# -- Compiling module arriav_hssi_rx_pcs_pma_interface
+# -- Compiling module arriav_hssi_rx_pld_pcs_interface
+# -- Compiling module arriav_hssi_tx_pcs_pma_interface
+# -- Compiling module arriav_hssi_tx_pld_pcs_interface
+# -- Compiling module arriav_hssi_refclk_divider
+# -- Compiling module arriav_pll_aux
+# -- Compiling module arriav_channel_pll
+# -- Compiling module arriav_hssi_avmm_interface
+# -- Compiling module arriav_hssi_pma_hi_pmaif
+# -- Compiling module arriav_hssi_pma_hi_xcvrif
+# 
+# Top level modules:
+# 	cyclonev_hssi_8g_pcs_aggregate
+# 	cyclonev_hssi_8g_rx_pcs
+# 	cyclonev_hssi_8g_tx_pcs
+# 	cyclonev_hssi_common_pcs_pma_interface
+# 	cyclonev_hssi_common_pld_pcs_interface
+# 	cyclonev_hssi_pipe_gen1_2
+# 	cyclonev_hssi_pma_aux
+# 	cyclonev_hssi_pma_int
+# 	cyclonev_hssi_pma_rx_buf
+# 	cyclonev_hssi_pma_rx_deser
+# 	cyclonev_hssi_pma_tx_buf
+# 	cyclonev_hssi_pma_tx_cgb
+# 	cyclonev_hssi_pma_tx_ser
+# 	cyclonev_hssi_pma_cdr_refclk_select_mux
+# 	cyclonev_hssi_rx_pcs_pma_interface
+# 	cyclonev_hssi_rx_pld_pcs_interface
+# 	cyclonev_hssi_tx_pcs_pma_interface
+# 	cyclonev_hssi_tx_pld_pcs_interface
+# 	cyclonev_hssi_refclk_divider
+# 	cyclonev_pll_aux
+# 	cyclonev_channel_pll
+# 	cyclonev_hssi_avmm_interface
+# 	cyclonev_hssi_pma_hi_pmaif
+# 	cyclonev_hssi_pma_hi_xcvrif
+# 	arriav_hssi_8g_pcs_aggregate
+# 	arriav_hssi_8g_rx_pcs
+# 	arriav_hssi_8g_tx_pcs
+# 	arriav_hssi_common_pcs_pma_interface
+# 	arriav_hssi_common_pld_pcs_interface
+# 	arriav_hssi_pipe_gen1_2
+# 	arriav_hssi_pma_aux
+# 	arriav_hssi_pma_int
+# 	arriav_hssi_pma_rx_buf
+# 	arriav_hssi_pma_rx_deser
+# 	arriav_hssi_pma_tx_buf
+# 	arriav_hssi_pma_tx_cgb
+# 	arriav_hssi_pma_tx_ser
+# 	arriav_hssi_pma_cdr_refclk_select_mux
+# 	arriav_hssi_rx_pcs_pma_interface
+# 	arriav_hssi_rx_pld_pcs_interface
+# 	arriav_hssi_tx_pcs_pma_interface
+# 	arriav_hssi_tx_pld_pcs_interface
+# 	arriav_hssi_refclk_divider
+# 	arriav_pll_aux
+# 	arriav_channel_pll
+# 	arriav_hssi_avmm_interface
+# 	arriav_hssi_pma_hi_pmaif
+# 	arriav_hssi_pma_hi_xcvrif
+# 
+# vlib verilog_libs/cyclonev_pcie_hip_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/cyclonev_pcie_hip_ver".
+# 
+# vmap cyclonev_pcie_hip_ver ./verilog_libs/cyclonev_pcie_hip_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/20.1/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/20.1/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cyclonev_hd_altpe2_hip_top
+# -- Compiling module arriav_hd_altpe2_hip_top
+# 
+# Top level modules:
+# 	cyclonev_hd_altpe2_hip_top
+# 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/github/IC-Single-core {C:/github/IC-Single-core/Gekkonidae.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module adder
+# -- Compiling module flopr
+# -- Compiling module flopenr
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module alu
+# -- Compiling module regfile
+# -- Compiling module controller
+# -- Compiling module extend
+# -- Compiling module maindec
+# -- Compiling module aludec
+# -- Compiling module datapath
+# -- Compiling module riscvsingle
+# -- Compiling module top
+# -- Compiling module imem
+# -- Compiling module dmem
+# 
+# Top level modules:
+# 	flopenr
+# 	top
+# 
+# vlog -sv -work work +incdir+C:/github/IC-Single-core {C:/github/IC-Single-core/tb_gekkonidae.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_gekkonidae
+# 
+# Top level modules:
+# 	tb_gekkonidae
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_gekkonidae
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_gekkonidae 
+# Loading sv_std.std
+# Loading work.tb_gekkonidae
+# Loading work.top
+# Loading work.riscvsingle
+# Loading work.controller
+# Loading work.maindec
+# Loading work.aludec
+# Loading work.datapath
+# Loading work.flopr
+# Loading work.adder
+# Loading work.mux2
+# Loading work.regfile
+# Loading work.extend
+# Loading work.alu
+# Loading work.mux3
+# Loading work.imem
+# Loading work.dmem
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Simulation succeeded
+# Break in Module tb_gekkonidae at C:/github/IC-Single-core/tb_gekkonidae.sv line 32
+# Simulation Breakpoint: Break in Module tb_gekkonidae at C:/github/IC-Single-core/tb_gekkonidae.sv line 32
+# MACRO ./Gekkonidae_run_msim_rtl_verilog.do PAUSED at line 57

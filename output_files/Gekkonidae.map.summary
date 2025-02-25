@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Fri Jan 17 18:00:27 2025
-Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Thu Feb 20 10:24:40 2025
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : Gekkonidae
-Top-level Entity Name : Gekkonidae
+Top-level Entity Name : fetch_unit
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 1008
-Total pins : 205
+Total registers : 32
+Total pins : 100
 Total virtual pins : 0
-Total block memory bits : 8,192
+Total block memory bits : 0
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

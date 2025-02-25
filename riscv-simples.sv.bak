@@ -1,0 +1,18 @@
+
+module memoria_dados(
+
+	input  logic [31:0] endereco, dado_entradaa,
+	input  logic        clock, permitir_escrita,
+	output logic        dado_saida
+
+);
+
+	logic [31:0] matriz[63:0]; // corta os primeiros dois bits para alinhamento de dados
+	
+	assign dado_saida = matriz[endereco[31:2]];
+	
+	always_ff @(posedge clock) 
+		if (permitir_saida) dado_saida <= matriz[]
+
+
+endmodule

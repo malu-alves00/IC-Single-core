@@ -45,13 +45,11 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+C:/github/IC-Single-core {C:/github/IC-Single-core/instr_mem_rom.v}
-vlog -vlog01compat -work work +incdir+C:/github/IC-Single-core {C:/github/IC-Single-core/data_instr.v}
 vlog -sv -work work +incdir+C:/github/IC-Single-core {C:/github/IC-Single-core/Gekkonidae.sv}
 
-vlog -sv -work work +incdir+C:/github/IC-Single-core {C:/github/IC-Single-core/tb_gekkonidae_new.sv}
+vlog -sv -work work +incdir+C:/github/IC-Single-core {C:/github/IC-Single-core/tb_gekkonidae.sv}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_gekkonidae_new
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_gekkonidae
 
 add wave *
 view structure

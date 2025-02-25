@@ -17,7 +17,7 @@ Z5 OV;L;10.1d;51
 r1
 !s85 0
 31
-Z6 !s108 1737151550.280000
+Z6 !s108 1737495090.926000
 Z7 !s107 c:/intelfpga_lite/20.1/quartus/eda/sim_lib/sgate.v|
 Z8 !s90 -reportprogress|300|-vlog01compat|-work|sgate_ver|c:/intelfpga_lite/20.1/quartus/eda/sim_lib/sgate.v|
 !s101 -O0
