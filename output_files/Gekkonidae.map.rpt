@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Gekkonidae
-Thu Feb 20 10:24:40 2025
+Wed Mar  5 17:51:06 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -47,7 +47,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Feb 20 10:24:40 2025          ;
+; Analysis & Synthesis Status     ; Successful - Wed Mar  5 17:51:06 2025          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; Gekkonidae                                     ;
 ; Top-level Entity Name           ; fetch_unit                                     ;
@@ -302,42 +302,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Thu Feb 20 10:24:34 2025
+    Info: Processing started: Wed Mar  5 17:50:55 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Gekkonidae -c Gekkonidae
 Info (20032): Parallel compilation is enabled and will use up to 16 processors
 Info (12021): Found 20 design units, including 20 entities, in source file gekkonidae.sv
-    Info (12023): Found entity 1: adder File: C:/github/IC-Single-core/Gekkonidae.sv Line: 12
-    Info (12023): Found entity 2: flopr File: C:/github/IC-Single-core/Gekkonidae.sv Line: 21
-    Info (12023): Found entity 3: flopenr File: C:/github/IC-Single-core/Gekkonidae.sv Line: 31
-    Info (12023): Found entity 4: mux2 File: C:/github/IC-Single-core/Gekkonidae.sv Line: 43
-    Info (12023): Found entity 5: mux3 File: C:/github/IC-Single-core/Gekkonidae.sv Line: 51
-    Info (12023): Found entity 6: alu File: C:/github/IC-Single-core/Gekkonidae.sv Line: 61
-    Info (12023): Found entity 7: regfile File: C:/github/IC-Single-core/Gekkonidae.sv Line: 86
-    Info (12023): Found entity 8: extend File: C:/github/IC-Single-core/Gekkonidae.sv Line: 104
-    Info (12023): Found entity 9: hazard_unit File: C:/github/IC-Single-core/Gekkonidae.sv Line: 122
-    Info (12023): Found entity 10: controller File: C:/github/IC-Single-core/Gekkonidae.sv Line: 168
-    Info (12023): Found entity 11: maindec File: C:/github/IC-Single-core/Gekkonidae.sv Line: 231
-    Info (12023): Found entity 12: aludec File: C:/github/IC-Single-core/Gekkonidae.sv Line: 256
-    Info (12023): Found entity 13: fetch_unit File: C:/github/IC-Single-core/Gekkonidae.sv Line: 281
-    Info (12023): Found entity 14: rf_unit File: C:/github/IC-Single-core/Gekkonidae.sv Line: 298
-    Info (12023): Found entity 15: execute_unit File: C:/github/IC-Single-core/Gekkonidae.sv Line: 318
-    Info (12023): Found entity 16: datapath File: C:/github/IC-Single-core/Gekkonidae.sv Line: 344
-    Info (12023): Found entity 17: rvpipeline File: C:/github/IC-Single-core/Gekkonidae.sv Line: 454
-    Info (12023): Found entity 18: top File: C:/github/IC-Single-core/Gekkonidae.sv Line: 485
-    Info (12023): Found entity 19: imem File: C:/github/IC-Single-core/Gekkonidae.sv Line: 502
-    Info (12023): Found entity 20: dmem File: C:/github/IC-Single-core/Gekkonidae.sv Line: 514
-Warning (10229): Verilog HDL Expression warning at tb_gekkonidae.sv(90): truncated literal to match 31 bits File: C:/github/IC-Single-core/tb_gekkonidae.sv Line: 90
-Info (12021): Found 3 design units, including 3 entities, in source file tb_gekkonidae.sv
+    Info (12023): Found entity 1: adder File: C:/github/IC-Single-core/Gekkonidae.sv Line: 26
+    Info (12023): Found entity 2: flopr File: C:/github/IC-Single-core/Gekkonidae.sv Line: 35
+    Info (12023): Found entity 3: flopenr File: C:/github/IC-Single-core/Gekkonidae.sv Line: 45
+    Info (12023): Found entity 4: mux2 File: C:/github/IC-Single-core/Gekkonidae.sv Line: 57
+    Info (12023): Found entity 5: mux3 File: C:/github/IC-Single-core/Gekkonidae.sv Line: 65
+    Info (12023): Found entity 6: alu File: C:/github/IC-Single-core/Gekkonidae.sv Line: 75
+    Info (12023): Found entity 7: regfile File: C:/github/IC-Single-core/Gekkonidae.sv Line: 100
+    Info (12023): Found entity 8: extend File: C:/github/IC-Single-core/Gekkonidae.sv Line: 117
+    Info (12023): Found entity 9: hazard_unit File: C:/github/IC-Single-core/Gekkonidae.sv Line: 136
+    Info (12023): Found entity 10: controller File: C:/github/IC-Single-core/Gekkonidae.sv Line: 184
+    Info (12023): Found entity 11: maindec File: C:/github/IC-Single-core/Gekkonidae.sv Line: 265
+    Info (12023): Found entity 12: aludec File: C:/github/IC-Single-core/Gekkonidae.sv Line: 291
+    Info (12023): Found entity 13: fetch_unit File: C:/github/IC-Single-core/Gekkonidae.sv Line: 317
+    Info (12023): Found entity 14: rf_unit File: C:/github/IC-Single-core/Gekkonidae.sv Line: 337
+    Info (12023): Found entity 15: execute_unit File: C:/github/IC-Single-core/Gekkonidae.sv Line: 355
+    Info (12023): Found entity 16: datapath File: C:/github/IC-Single-core/Gekkonidae.sv Line: 387
+    Info (12023): Found entity 17: rvpipeline File: C:/github/IC-Single-core/Gekkonidae.sv Line: 526
+    Info (12023): Found entity 18: top File: C:/github/IC-Single-core/Gekkonidae.sv Line: 565
+    Info (12023): Found entity 19: imem File: C:/github/IC-Single-core/Gekkonidae.sv Line: 587
+    Info (12023): Found entity 20: dmem File: C:/github/IC-Single-core/Gekkonidae.sv Line: 599
+Warning (10229): Verilog HDL Expression warning at tb_gekkonidae.sv(94): truncated literal to match 31 bits File: C:/github/IC-Single-core/tb_gekkonidae.sv Line: 94
+Info (12021): Found 5 design units, including 5 entities, in source file tb_gekkonidae.sv
     Info (12023): Found entity 1: tb_rvpipeline File: C:/github/IC-Single-core/tb_gekkonidae.sv Line: 1
-    Info (12023): Found entity 2: tb_fetch File: C:/github/IC-Single-core/tb_gekkonidae.sv Line: 45
-    Info (12023): Found entity 3: tb_test File: C:/github/IC-Single-core/tb_gekkonidae.sv Line: 82
-Warning (10236): Verilog HDL Implicit Net warning at Gekkonidae.sv(187): created implicit net for "ResulSrcE0" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 187
-Warning (10236): Verilog HDL Implicit Net warning at Gekkonidae.sv(312): created implicit net for "clk" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 312
-Warning (10236): Verilog HDL Implicit Net warning at Gekkonidae.sv(479): created implicit net for "PcSrcE" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 479
+    Info (12023): Found entity 2: tb_fetch File: C:/github/IC-Single-core/tb_gekkonidae.sv Line: 48
+    Info (12023): Found entity 3: tb_test File: C:/github/IC-Single-core/tb_gekkonidae.sv Line: 86
+    Info (12023): Found entity 4: tb_controller File: C:/github/IC-Single-core/tb_gekkonidae.sv Line: 117
+    Info (12023): Found entity 5: tb_rfile File: C:/github/IC-Single-core/tb_gekkonidae.sv Line: 145
 Info (12127): Elaborating entity "fetch_unit" for the top level hierarchy
-Info (12128): Elaborating entity "mux2" for hierarchy "mux2:pcmux" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 290
-Info (12128): Elaborating entity "flopenr" for hierarchy "flopenr:pcreg" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 292
-Info (12128): Elaborating entity "adder" for hierarchy "adder:pcadd4" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 294
+Info (12128): Elaborating entity "mux2" for hierarchy "mux2:pcmux" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 326
+Info (12128): Elaborating entity "flopenr" for hierarchy "flopenr:pcreg" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 328
+Info (12128): Elaborating entity "adder" for hierarchy "adder:pcadd4" File: C:/github/IC-Single-core/Gekkonidae.sv Line: 330
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/github/IC-Single-core/output_files/Gekkonidae.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -346,10 +345,10 @@ Info (21057): Implemented 163 device resources after synthesis - the final resou
     Info (21058): Implemented 36 input pins
     Info (21059): Implemented 64 output pins
     Info (21061): Implemented 63 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4874 megabytes
-    Info: Processing ended: Thu Feb 20 10:24:40 2025
-    Info: Elapsed time: 00:00:06
+    Info: Processing ended: Wed Mar  5 17:51:06 2025
+    Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:14
 
 

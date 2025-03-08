@@ -103,12 +103,11 @@ module regfile (
 	input  logic [31:0] data_in, 
 	output logic [31:0] data1_out, data2_out
 );
-	logic [31:0] regs[31]; 
+	logic [31:0] regs[31:0]; 
 	
-	always_ff @(posedge clk) begin
-		if (rw & (wr_address != 'b0)) regs[wr_address] <= data_in;
-	end
-	
+	always_ff @(negedge clk) 
+		if (rw) regs[wr_address] <= data_in;
+
 	assign data1_out = addr1 == 'b0 ? 'b0 : regs[addr1];
 	assign data2_out = addr2 == 'b0 ? 'b0 : regs[addr2];
 endmodule
@@ -191,7 +190,9 @@ module controller(
 	output logic       PCSrcE, ALUSrcE,
 	output logic       RegWriteW, RegWriteM,
 	output logic [1:0] ImmSrcD,
-	output logic [2:0] ALUControlE
+	output logic [2:0] ALUControlE,
+	
+	input logic reset
 );
 	logic [1:0] ALUOp, ResultSrcD, ResultSrcM, ResultSrcE;
 	logic       Branch, Jump, RegWriteD, RegWriteE;
@@ -201,7 +202,7 @@ module controller(
 	logic [2:0] ALUControlD;
 	logic			ALUSrcD;
 	
-	assign ResulSrcE0 = ResultSrcE[0]; // vai para hazard_unit
+	assign ResultSrcE0 = ResultSrcE[0]; // vai para hazard_unit
 	
 	maindec md(op, ResultSrcD, MemWriteD, BranchD, ALUSrcD, RegWriteD, JumpD, ImmSrcD, ALUOp); // decoder principal
 	
@@ -211,7 +212,7 @@ module controller(
 		
 		// decode -> execute -> memory
 		
-		if(FlushE) begin
+		if(FlushE | reset) begin
 		
 			RegWriteE <= 0;
 			ResultSrcE <= 0;
@@ -234,13 +235,26 @@ module controller(
 		
 		end
 		
-		RegWriteM <= RegWriteE;
-		ResultSrcM <= ResultSrcE;
-		MemWriteM <= MemWriteE;
+		if(reset) begin
 		
-		RegWriteW <= RegWriteM;
-		ResultSrcW <= ResultSrcM;
+			RegWriteM <= 0;
+			ResultSrcM <= 0;
+			MemWriteM <= 0;
+			
+			RegWriteW <= 0;
+			ResultSrcW <= 0;
 		
+		end 
+		else begin
+		
+			RegWriteM <= RegWriteE;
+			ResultSrcM <= ResultSrcE;
+			MemWriteM <= MemWriteE;
+			
+			RegWriteW <= RegWriteM;
+			ResultSrcW <= ResultSrcM;
+		
+		end
 	end
 	
 	assign PCSrcE = (BranchE & Zero) | JumpE;
@@ -267,7 +281,7 @@ module maindec(
 			7'b1100011: controls = 11'b0_10_0_0_00_1_01_0;
 			7'b0010011: controls = 11'b1_00_1_0_00_0_10_0;
 			7'b1101111: controls = 11'b1_11_0_0_10_0_00_1;
-			default: controls = 11'bx_xx_x_x_xx_x_xx_x;
+			default: controls = 11'b0_xx_0_0_00_0_xx_0;
 		endcase
 endmodule
 
@@ -321,22 +335,18 @@ endmodule
 
 
 module rf_unit(
-	input  logic        RegWrite,
+	input  logic        RegWrite, clk,
 	input  logic [1:0]  ImmSrc,
-	input  logic [31:0] Instr, Result,
+	input  logic [31:0] Result,
 	output logic [31:0] Rd1, Rd2, ImmExt,
-	output logic [4:0]  Rs1, Rs2, Rd_out,
-	input  logic [4:0]  Rd
+	input  logic [4:0]  Rd, Rs1D, Rs2D,
+	input  logic [24:0] Imm
 
 );
-
-	assign Rs1 = Instr[19:15];
-	assign Rs2 = Instr[24:20];
-	assign Rd_out = Instr[11:7];
 	
-	regfile rf(!clk, RegWrite, Instr[19:15], Instr[24:20], Rd, Result, Rd1, Rd2); // register file
+	regfile rf(clk, RegWrite, Rs1D, Rs2D, Rd, Result, Rd1, Rd2); // register file
 	
-	extend ext(Instr[31:7], ImmSrc, ImmExt); // extend
+	extend ext(Imm, ImmSrc, ImmExt); // extend
 
 endmodule 
 
@@ -400,16 +410,26 @@ module datapath(
 	// hazard unit
 	input  logic [1:0]  ForwardA, ForwardB,
 	input  logic        StallF, StallD, FlushD, FlushE,
-	output logic [4:0]  Rs1D, Rs2D, Rs1E, Rs2E, RdE, RdM, RdW
+	output logic [4:0]  Rs1D, Rs2D, Rs1E, Rs2E, RdE, RdM, RdW,
+	
+	// debug
+	
+	output logic [31:0] Rd1D, Rd2D, ImmExtD, ResultW
 );
 
 	logic [31:0] PCPlus4F;
-	logic [31:0] pcD, PCPlus4D, ImmExtD, Rd1D, Rd2D;
+	logic [31:0] pcD, PCPlus4D/*, ImmExtD, Rd1D, Rd2D*/;
 	logic [31:0] PCTargetE, Rd1E, Rd2E, ImmExtE, pcE, ALUResultE, WriteDataE, PCPlus4E;
 	logic [31:0] PCPlus4M;
-	logic [31:0] ResultW, ReadDataW, ALUResultW, PCPlus4W;
+	logic [31:0] /*ResultW,*/ ReadDataW, ALUResultW, PCPlus4W;
+	logic [24:0] Imm;
 	
 	logic [4:0]  RdD;
+	
+	assign Rs1D = InstrD[19:15];
+	assign Rs2D = InstrD[24:20];
+	assign RdD = InstrD[11:7];
+	assign Imm = InstrD[31:7];
 	
 	
 	// fetch
@@ -418,7 +438,7 @@ module datapath(
 	
 	always_ff @(posedge clk) begin
 		
-		if (FlushD) begin
+		if (FlushD || reset) begin
 			InstrD <= 0;
 			pcD <= 0;
 			PCPlus4D <= 0;
@@ -428,16 +448,17 @@ module datapath(
 			pcD <= pcF;
 			PCPlus4D <= PCPlus4F;
 		end
+		
 	end
 	
 	
 	// decode		
 	
-	rf_unit rf_unit(RegWriteW, ImmSrcD, InstrD, ResultW, Rd1D, Rd2D, ImmExtD, Rs1D, Rs2D, RdD, RdW);
+	rf_unit rf_unit(RegWriteW, clk, ImmSrcD, ResultW, Rd1D, Rd2D, ImmExtD, RdW, Rs1D, Rs2D, Imm);
 	
 	always @(posedge clk) begin
 	
-		if(FlushE) begin
+		if(FlushE || reset) begin
 			pcE <= 0;
 			Rd1E <= 0;
 			Rd2E <= 0;
@@ -459,23 +480,41 @@ module datapath(
 		end
 	end
 	
-	// execute
+	// execute e wb
 	
 	execute_unit ex_unit(ALUSrcE, ForwardA, ForwardB, ALUControlE, Rd1E, Rd2E, pcE, ImmExtE, ALUResultM, ResultW, ALUResultE, WriteDataE, PCTargetE, ZeroE);
 	
 	always @(posedge clk) begin
-	
-		ALUResultM <= ALUResultE;
-		WriteDataM <= WriteDataE;
-		RdM <= RdE;
-		PCPlus4M <= PCPlus4E;
-	
-		ALUResultW <= ALUResultM;
-		ReadDataW <= ReadDataM;
-		RdW <= RdM;
-		PCPlus4W <= PCPlus4M;
 		
+		if (reset) begin
+	
+			ALUResultM <= 0;
+			WriteDataM <= 0;
+			RdM <= 0;
+			PCPlus4M <= 0;
+		
+			ALUResultW <= 0;
+			ReadDataW <= 0;
+			RdW <= 0;
+			PCPlus4W <= 0;
+	
+		end
+		else begin
+		
+			ALUResultM <= ALUResultE;
+			WriteDataM <= WriteDataE;
+			RdM <= RdE;
+			PCPlus4M <= PCPlus4E;
+		
+			ALUResultW <= ALUResultM;
+			ReadDataW <= ReadDataM;
+			RdW <= RdM;
+			PCPlus4W <= PCPlus4M;
+			
+		end
 	end
+	
+	
 	
 	mux3 #(32) writeback_mux(ALUResultW, ReadDataW, PCPlus4W, ResultSrcW, ResultW);
 	
@@ -494,22 +533,30 @@ module rvpipeline(
 	// data mem
 	output logic        MemWriteM,
 	output logic [31:0] ALUResultM, WriteDataM,
-	input  logic [31:0] ReadDataM
+	input  logic [31:0] ReadDataM,
+	
+	// debug
+	
+	output logic StallF,
+	output logic [31:0] Rd1D, Rd2D, ImmExtD, ResultW,
+	output logic [1:0]  ForwardA, ForwardB, ResultSrcW,
+	output logic RegWriteW,
+	output logic [4:0] RdW, Rs1D, Rs2D
 );
 
-	logic        ALUSrcE, RegWriteW, RegWriteM, ZeroE, PCSrcE, ResultSrcE0;
-	logic			 StallF, StallD, FlushD, FlushE;
-	logic [1:0]  ResultSrcW, ImmSrcD, ForwardA, ForwardB;
+	logic        ALUSrcE, /*RegWriteW, */RegWriteM, ZeroE, PCSrcE, ResultSrcE0;
+	logic			 /*StallF,*/ StallD, FlushD, FlushE;
+	logic [1:0]  /*ResultSrcW,*/ ImmSrcD/*, ForwardA, ForwardB*/;
 	logic [2:0]  ALUControlE;
-	logic [4:0]  Rs1D, Rs2D, Rs1E, Rs2E, RdE, RdM, RdW;
+	logic [4:0]  /*Rs1D, Rs2D,*/ Rs1E, Rs2E, RdE, RdM/*, RdW*/;
 	logic [31:0] InstrD;
 	
-	controller c(InstrD[6:0], InstrD[14:12], InstrD[30], ZeroE, clk, FlushE, ResultSrcW, MemWriteM, ResultSrcE0, PCSrcE, ALUSrcE, RegWriteW, RegWriteM, ImmSrcD, ALUControlE);
+	controller c(InstrD[6:0], InstrD[14:12], InstrD[30], ZeroE, clk, FlushE, ResultSrcW, MemWriteM, ResultSrcE0, PCSrcE, ALUSrcE, RegWriteW, RegWriteM, ImmSrcD, ALUControlE, reset);
 	
 	datapath dp(clk, reset, ResultSrcW, PCSrcE, ALUSrcE, RegWriteW, ImmSrcD, ALUControlE, InstrF, pcF, ReadDataM, ALUResultM, WriteDataM, InstrD, ZeroE,
-					ForwardA, ForwardB, StallF, StallD, FlushD, FlushE, Rs1D, Rs2D, Rs1E, Rs2E, RdE, RdM, RdW);
+					ForwardA, ForwardB, StallF, StallD, FlushD, FlushE, Rs1D, Rs2D, Rs1E, Rs2E, RdE, RdM, RdW, Rd1D, Rd2D, ImmExtD, ResultW);
 	
-	hazard_unit hu(Rs1D, Rs2D, Rs1E, Rs2E, RdE, RdM, RdW, PcSrcE, ResultSrcE0, RegWriteM, RegWriteW,StallF, StallD, FlushD, FlushE, ForwardA, ForwardB);
+	hazard_unit hu(Rs1D, Rs2D, Rs1E, Rs2E, RdE, RdM, RdW, PCSrcE, ResultSrcE0, RegWriteM, RegWriteW,StallF, StallD, FlushD, FlushE, ForwardA, ForwardB);
 	
 endmodule
 
@@ -518,11 +565,16 @@ endmodule
 module top (
 	input  logic        clk, reset,
 	output logic [31:0] WriteDataM, ALUResultM, ReadDataM, InstrF, pcF,
-	output logic        MemWriteM
+	output logic        MemWriteM,
+	output logic StallF,
+	output logic [31:0] Rd1D, Rd2D, ImmExtD, ResultW,
+	output logic [1:0]  ForwardA, ForwardB, ResultSrcW,
+	output logic RegWriteW,
+	output logic [4:0] RdW, Rs1D, Rs2D
 );
 
 	
-	rvpipeline rvp(clk, reset, pcF, InstrF, MemWriteM,	ALUResultM, WriteDataM, ReadDataM);
+	rvpipeline rvp(clk, reset, pcF, InstrF, MemWriteM,	ALUResultM, WriteDataM, ReadDataM, StallF, Rd1D, Rd2D, ImmExtD, ResultW, ForwardA, ForwardB, ResultSrcW, RegWriteW, RdW, Rs1D, Rs2D);
 	
 	imem imem(pcF, InstrF);
 	

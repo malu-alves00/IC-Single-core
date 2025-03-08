@@ -1,5 +1,5 @@
 Flow report for Gekkonidae
-Thu Feb 20 10:25:19 2025
+Wed Mar  5 17:51:51 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Thu Feb 20 10:25:19 2025          ;
+; Flow Status                     ; Successful - Wed Mar  5 17:51:51 2025          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; Gekkonidae                                     ;
 ; Top-level Entity Name           ; fetch_unit                                     ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/20/2025 10:24:35 ;
+; Start date & time ; 03/05/2025 17:50:56 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Gekkonidae          ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 2543784148295.174005787517584          ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 2543784148295.174120785608004          ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_test                           ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_gekkonidae                     ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_data_mem                       ;
@@ -87,8 +87,10 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_main_decoder                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_full_decoder                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_rvpipeline                     ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_rfile                          ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_gekkonidae_new                 ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_test_concat                    ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_controller                     ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_fetch                          ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -105,8 +107,10 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_FILE                  ; tb_main_decoder.sv                     ; --            ; --          ; tb_main_decoder                   ;
 ; EDA_TEST_BENCH_FILE                  ; tb_full_decoder.sv                     ; --            ; --          ; tb_full_decoder                   ;
 ; EDA_TEST_BENCH_FILE                  ; tb_gekkonidae.sv                       ; --            ; --          ; tb_rvpipeline                     ;
+; EDA_TEST_BENCH_FILE                  ; tb_gekkonidae.sv                       ; --            ; --          ; tb_rfile                          ;
 ; EDA_TEST_BENCH_FILE                  ; tb_gekkonidae_new.sv                   ; --            ; --          ; tb_gekkonidae_new                 ;
 ; EDA_TEST_BENCH_FILE                  ; tb_test_concat.sv                      ; --            ; --          ; tb_test_concat                    ;
+; EDA_TEST_BENCH_FILE                  ; tb_gekkonidae.sv                       ; --            ; --          ; tb_controller                     ;
 ; EDA_TEST_BENCH_FILE                  ; tb_gekkonidae.sv                       ; --            ; --          ; tb_fetch                          ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; tb_test                                ; --            ; --          ; tb_test                           ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; tb_gekkonidae                          ; --            ; --          ; tb_gekkonidae                     ;
@@ -115,12 +119,16 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_MODULE_NAME           ; tb_main_decoder                        ; --            ; --          ; tb_main_decoder                   ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; tb_full_decoder                        ; --            ; --          ; tb_full_decoder                   ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; tb_rvpipeline                          ; --            ; --          ; tb_rvpipeline                     ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb_rfile                               ; --            ; --          ; tb_rfile                          ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; tb_gekkonidae_new                      ; --            ; --          ; tb_gekkonidae_new                 ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; tb_test_concat                         ; --            ; --          ; tb_test_concat                    ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb_controller                          ; --            ; --          ; tb_controller                     ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; tb_fetch                               ; --            ; --          ; tb_fetch                          ;
 ; EDA_TEST_BENCH_NAME                  ; tb_fetch                               ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; tb_test                                ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; tb_rvpipeline                          ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; tb_controller                          ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; tb_rfile                               ; --            ; --          ; eda_simulation                    ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                                ;
@@ -140,12 +148,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4874 MB             ; 00:00:14                           ;
-; Fitter               ; 00:00:26     ; 1.0                     ; 8034 MB             ; 00:01:41                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 5216 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.2                     ; 5406 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4744 MB             ; 00:00:01                           ;
-; Total                ; 00:00:40     ; --                      ; --                  ; 00:02:04                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4874 MB             ; 00:00:14                           ;
+; Fitter               ; 00:00:30     ; 1.0                     ; 8034 MB             ; 00:01:45                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 5216 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.2                     ; 5404 MB             ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4744 MB             ; 00:00:01                           ;
+; Total                ; 00:00:51     ; --                      ; --                  ; 00:02:08                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

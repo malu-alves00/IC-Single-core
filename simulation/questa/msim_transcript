@@ -1,4 +1,6 @@
 # Reading pref.tcl
+# A bookmarks file was found in the current directory with 1 bookmark
+# Bookmark(s) were restored for window "Wave"
 # //  Questa Intel Starter FPGA Edition-64
 # //  Version 2023.3 win64 Jul 17 2023
 # //
@@ -28,7 +30,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_ver {c:/intelfpga/23.1std/quartus/eda/sim_lib/altera_primitives.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 10:38:26 on Feb 20,2025
+# Start time: 17:52:09 on Mar 05,2025
 # vlog -reportprogress 300 -vlog01compat -work altera_ver c:/intelfpga/23.1std/quartus/eda/sim_lib/altera_primitives.v 
 # -- Compiling module global
 # -- Compiling module carry
@@ -110,7 +112,7 @@
 # 	alt_iobuf_diff
 # 	alt_bidir_diff
 # 	alt_bidir_buf
-# End time: 10:38:26 on Feb 20,2025, Elapsed time: 0:00:00
+# End time: 17:52:09 on Mar 05,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/lpm_ver
@@ -122,7 +124,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work lpm_ver {c:/intelfpga/23.1std/quartus/eda/sim_lib/220model.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 10:38:27 on Feb 20,2025
+# Start time: 17:52:09 on Mar 05,2025
 # vlog -reportprogress 300 -vlog01compat -work lpm_ver c:/intelfpga/23.1std/quartus/eda/sim_lib/220model.v 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
@@ -186,7 +188,7 @@
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 10:38:27 on Feb 20,2025, Elapsed time: 0:00:00
+# End time: 17:52:09 on Mar 05,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/sgate_ver
@@ -198,7 +200,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work sgate_ver {c:/intelfpga/23.1std/quartus/eda/sim_lib/sgate.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 10:38:27 on Feb 20,2025
+# Start time: 17:52:09 on Mar 05,2025
 # vlog -reportprogress 300 -vlog01compat -work sgate_ver c:/intelfpga/23.1std/quartus/eda/sim_lib/sgate.v 
 # -- Compiling module oper_add
 # -- Compiling module oper_addsub
@@ -240,7 +242,7 @@
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 10:38:27 on Feb 20,2025, Elapsed time: 0:00:00
+# End time: 17:52:09 on Mar 05,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_mf_ver
@@ -252,7 +254,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_mf_ver {c:/intelfpga/23.1std/quartus/eda/sim_lib/altera_mf.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 10:38:27 on Feb 20,2025
+# Start time: 17:52:10 on Mar 05,2025
 # vlog -reportprogress 300 -vlog01compat -work altera_mf_ver c:/intelfpga/23.1std/quartus/eda/sim_lib/altera_mf.v 
 # -- Compiling module lcell
 # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
@@ -382,7 +384,7 @@
 # 	alt_fault_injection
 # 	sld_virtual_jtag_basic
 # 	altsource_probe
-# End time: 10:38:28 on Feb 20,2025, Elapsed time: 0:00:01
+# End time: 17:52:10 on Mar 05,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_lnsim_ver
@@ -394,7 +396,7 @@
 # Modifying modelsim.ini
 # vlog -sv -work altera_lnsim_ver {c:/intelfpga/23.1std/quartus/eda/sim_lib/altera_lnsim.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 10:38:28 on Feb 20,2025
+# Start time: 17:52:10 on Mar 05,2025
 # vlog -reportprogress 300 -sv -work altera_lnsim_ver c:/intelfpga/23.1std/quartus/eda/sim_lib/altera_lnsim.sv 
 # -- Compiling package altera_lnsim_functions
 # -- Compiling package altera_generic_pll_functions
@@ -477,7 +479,7 @@
 # 	altera_iopll
 # 	fourteennm_altera_iopll
 # 	fourteennm_simple_iopll
-# End time: 10:38:28 on Feb 20,2025, Elapsed time: 0:00:00
+# End time: 17:52:11 on Mar 05,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_ver
@@ -489,7 +491,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga/23.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 10:38:28 on Feb 20,2025
+# Start time: 17:52:11 on Mar 05,2025
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga/23.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -503,19 +505,19 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 10:38:29 on Feb 20,2025, Elapsed time: 0:00:01
+# End time: 17:52:12 on Mar 05,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 10
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga/23.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 10:38:29 on Feb 20,2025
+# Start time: 17:52:12 on Mar 05,2025
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga/23.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 10:38:30 on Feb 20,2025, Elapsed time: 0:00:01
+# End time: 17:52:12 on Mar 05,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga/23.1std/quartus/eda/sim_lib/cyclonev_atoms.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 10:38:30 on Feb 20,2025
+# Start time: 17:52:12 on Mar 05,2025
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga/23.1std/quartus/eda/sim_lib/cyclonev_atoms.v 
 # -- Compiling UDP CYCLONEV_PRIM_DFFE
 # -- Compiling UDP CYCLONEV_PRIM_DFFEAS
@@ -655,7 +657,7 @@
 # 	cyclonev_mem_phy
 # 	cyclonev_oscillator
 # 	cyclonev_hps_interface_fpga2sdram
-# End time: 10:38:30 on Feb 20,2025, Elapsed time: 0:00:00
+# End time: 17:52:12 on Mar 05,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_hssi_ver
@@ -667,15 +669,15 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga/23.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 10:38:30 on Feb 20,2025
+# Start time: 17:52:13 on Mar 05,2025
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga/23.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 10:38:31 on Feb 20,2025, Elapsed time: 0:00:01
+# End time: 17:52:13 on Mar 05,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga/23.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 10:38:31 on Feb 20,2025
+# Start time: 17:52:13 on Mar 05,2025
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga/23.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v 
 # -- Compiling module cyclonev_hssi_8g_pcs_aggregate
 # -- Compiling module cyclonev_hssi_8g_rx_pcs
@@ -775,7 +777,7 @@
 # 	arriav_hssi_avmm_interface
 # 	arriav_hssi_pma_hi_pmaif
 # 	arriav_hssi_pma_hi_xcvrif
-# End time: 10:38:31 on Feb 20,2025, Elapsed time: 0:00:00
+# End time: 17:52:13 on Mar 05,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_pcie_hip_ver
@@ -787,7 +789,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga/23.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 10:38:31 on Feb 20,2025
+# Start time: 17:52:14 on Mar 05,2025
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga/23.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -797,18 +799,18 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 10:38:32 on Feb 20,2025, Elapsed time: 0:00:01
+# End time: 17:52:15 on Mar 05,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 6
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga/23.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 10:38:32 on Feb 20,2025
+# Start time: 17:52:15 on Mar 05,2025
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga/23.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v 
 # -- Compiling module cyclonev_hd_altpe2_hip_top
 # -- Compiling module arriav_hd_altpe2_hip_top
 # 
 # Top level modules:
 # 	cyclonev_hd_altpe2_hip_top
-# End time: 10:38:32 on Feb 20,2025, Elapsed time: 0:00:00
+# End time: 17:52:15 on Mar 05,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
@@ -822,7 +824,7 @@
 # 
 # vlog -sv -work work +incdir+C:/github/IC-Single-core {C:/github/IC-Single-core/Gekkonidae.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 10:38:33 on Feb 20,2025
+# Start time: 17:52:15 on Mar 05,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/github/IC-Single-core" C:/github/IC-Single-core/Gekkonidae.sv 
 # -- Compiling module adder
 # -- Compiling module flopr
@@ -848,27 +850,31 @@
 # Top level modules:
 # 	flopr
 # 	top
-# End time: 10:38:33 on Feb 20,2025, Elapsed time: 0:00:00
+# End time: 17:52:15 on Mar 05,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/github/IC-Single-core {C:/github/IC-Single-core/tb_gekkonidae.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 10:38:33 on Feb 20,2025
+# Start time: 17:52:15 on Mar 05,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/github/IC-Single-core" C:/github/IC-Single-core/tb_gekkonidae.sv 
 # -- Compiling module tb_rvpipeline
 # -- Compiling module tb_fetch
 # -- Compiling module tb_test
+# -- Compiling module tb_controller
+# -- Compiling module tb_rfile
 # 
 # Top level modules:
 # 	tb_rvpipeline
 # 	tb_fetch
 # 	tb_test
-# End time: 10:38:33 on Feb 20,2025, Elapsed time: 0:00:00
+# 	tb_controller
+# 	tb_rfile
+# End time: 17:52:15 on Mar 05,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_rvpipeline
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_rvpipeline 
-# Start time: 10:38:33 on Feb 20,2025
+# Start time: 17:52:15 on Mar 05,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
@@ -893,6 +899,8 @@
 # Loading work.hazard_unit(fast)
 # Loading work.imem(fast)
 # Loading work.dmem(fast)
+# Bookmark "bookmark0" already exists with that definition in window "Wave", ignoring
+# A bookmarks file was found in the current directory with 1 bookmark
 # 
 # add wave *
 # view structure
@@ -900,7 +908,9 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# Break key hit
-# Simulation stop requested.
-# End time: 10:39:27 on Feb 20,2025, Elapsed time: 0:00:54
+# Simulation succeeded
+# ** Note: $stop    : C:/github/IC-Single-core/tb_gekkonidae.sv(35)
+#    Time: 275 ps  Iteration: 1  Instance: /tb_rvpipeline
+# Break in Module tb_rvpipeline at C:/github/IC-Single-core/tb_gekkonidae.sv line 35
+# End time: 18:22:17 on Mar 05,2025, Elapsed time: 0:30:02
 # Errors: 0, Warnings: 1

@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/github/IC-Single-core/simulation/questa
 vio_buf_opdrn
 Z1 2c:/intelfpga/23.1std/quartus/eda/sim_lib/sgate.v
-Z2 !s110 1740058707
+Z2 !s110 1741207929
 !i10b 1
 !s100 kI<0MRJaacKMn5<<@K2@g0
 IJeTS8_fz0QdgaC7M7lSKh3
@@ -19,14 +19,14 @@ R0
 Z3 w1715758842
 Z4 8c:/intelfpga/23.1std/quartus/eda/sim_lib/sgate.v
 Z5 Fc:/intelfpga/23.1std/quartus/eda/sim_lib/sgate.v
-!i122 16
+!i122 57
 L0 249 22
 Z6 VDg1SIo80bB@j0V0VzS_@n1
 Z7 OL;L;2023.3;77
 r1
 !s85 0
 31
-Z8 !s108 1740058707.000000
+Z8 !s108 1741207929.000000
 !s107 c:/intelfpga/23.1std/quartus/eda/sim_lib/sgate.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|sgate_ver|c:/intelfpga/23.1std/quartus/eda/sim_lib/sgate.v|
 !i113 0
@@ -42,7 +42,7 @@ R0
 R3
 R4
 R5
-!i122 16
+!i122 57
 L0 221 23
 R6
 R7
@@ -65,7 +65,7 @@ R0
 R3
 R4
 R5
-!i122 16
+!i122 57
 L0 191 26
 R6
 R7
@@ -88,7 +88,7 @@ R0
 R3
 R4
 R5
-!i122 16
+!i122 57
 L0 19 74
 R6
 R7
@@ -111,7 +111,7 @@ R0
 R3
 R4
 R5
-!i122 16
+!i122 57
 L0 96 91
 R6
 R7
@@ -134,7 +134,7 @@ R0
 R3
 R4
 R5
-!i122 16
+!i122 57
 L0 1073 59
 R6
 R7
@@ -157,7 +157,7 @@ R0
 R3
 R4
 R5
-!i122 16
+!i122 57
 L0 1037 32
 R6
 R7
@@ -180,7 +180,7 @@ R0
 R3
 R4
 R5
-!i122 16
+!i122 57
 L0 395 85
 R6
 R7
@@ -203,7 +203,7 @@ R0
 R3
 R4
 R5
-!i122 16
+!i122 57
 L0 1136 17
 R6
 R7
@@ -226,7 +226,7 @@ R0
 R3
 R4
 R5
-!i122 16
+!i122 57
 L0 573 72
 R6
 R7
@@ -249,7 +249,7 @@ R0
 R3
 R4
 R5
-!i122 16
+!i122 57
 L0 854 88
 R6
 R7
@@ -272,7 +272,7 @@ R0
 R3
 R4
 R5
-!i122 16
+!i122 57
 L0 484 85
 R6
 R7
@@ -295,7 +295,7 @@ R0
 R3
 R4
 R5
-!i122 16
+!i122 57
 L0 275 68
 R6
 R7
@@ -318,7 +318,7 @@ R0
 R3
 R4
 R5
-!i122 16
+!i122 57
 L0 946 42
 R6
 R7
@@ -341,7 +341,7 @@ R0
 R3
 R4
 R5
-!i122 16
+!i122 57
 L0 650 79
 R6
 R7
@@ -364,7 +364,7 @@ R0
 R3
 R4
 R5
-!i122 16
+!i122 57
 L0 733 57
 R6
 R7
@@ -387,7 +387,7 @@ R0
 R3
 R4
 R5
-!i122 16
+!i122 57
 L0 794 56
 R6
 R7
@@ -410,7 +410,7 @@ R0
 R3
 R4
 R5
-!i122 16
+!i122 57
 L0 992 41
 R6
 R7
@@ -433,7 +433,7 @@ R0
 R3
 R4
 R5
-!i122 16
+!i122 57
 L0 348 43
 R6
 R7
